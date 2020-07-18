@@ -1,0 +1,1161 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html,
+body {
+  width: 100%;
+  color: #555;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "\30D2\30E9\30AE\30CE\89D2\30B4\30B7\30C3\30AF   Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "\FF2D\FF33   \FF30\30B4\30B7\30C3\30AF", "MS PGothic", sans-serif;
+}
+
+p,
+a {
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #555;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #fde76d;
+}
+
+.l-header {
+  box-sizing: border-box;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.l-header.is-relative {
+  position: relative;
+}
+
+.l-header.is-absolute {
+  position: absolute;
+  top: 0;
+}
+
+.l-list__container {
+  width: 600px;
+  position: relative;
+  float: right;
+  margin-right: 5px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.l-footer {
+  background-color: #efefef;
+  color: #555;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  width: 100%;
+}
+
+.c-header__menu {
+  color: #555;
+  text-decoration: none;
+  float: left;
+  margin-left: 20px;
+  padding: 5px;
+}
+
+.c-container {
+  margin-top: 40px;
+  background: radial-gradient(#e9e9ff, #fffef9);
+  box-shadow: 0 10px 10px -3px rgba(161, 159, 197, 0.4);
+  transition: 0.3s;
+}
+
+.c-container:hover {
+  transition: 0.3s;
+  box-shadow: 0 10px 10px 10px rgba(161, 159, 197, 0.4);
+}
+
+.c-container__text {
+  position: relative;
+  width: 920px;
+  font-size: 30px;
+  line-height: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c-register__btn {
+  width: 280px;
+  height: 84px;
+  line-height: 84px;
+  font-size: 24px;
+  background-color: #f11414bd;
+  color: #fffef9;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
+  transition: 0.3s;
+}
+
+.c-register__btn:hover {
+  box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15), 0 0 5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.c-register__btn a {
+  padding: 30px;
+}
+
+.c-login__title {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.c-login__container {
+  position: relative;
+  width: 980px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(3, 3, 3, 0.6);
+  border-radius: 3px;
+  top: 140px;
+  color: #fffef9;
+}
+
+.c-item__container {
+  position: relative;
+  width: 100%;
+  top: 75px;
+}
+
+.c-input__container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-login__label {
+  width: 150px;
+}
+
+.c-login__input {
+  width: 380px;
+  height: 40px;
+  font-size: 18px;
+}
+
+.c-remember {
+  position: relative;
+  width: 70%;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-remember__checkbox {
+  transform: scale(1.2);
+}
+
+.c-remember__label {
+  height: 16px;
+  line-height: 18px;
+  margin-left: 5px;
+  width: 200px;
+}
+
+.c-submit {
+  position: relative;
+  width: 72%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 2px;
+}
+
+.c-background__login {
+  background-image: url(/images/hero2.jpg?377f67a3111410e81d5edf60cdd9c44d);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 840px;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-blend-mode: lighten;
+  z-index: 1;
+}
+
+.c-background__register {
+  background-image: url(/images/work_and_coffee.jpg?a7bc71b5c8693663854b789c6ab8329b);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 800px;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-blend-mode: lighten;
+  z-index: 1;
+}
+
+.c-label__forgot {
+  color: #efda9a;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.c-base__container {
+  position: relative;
+  width: 980px;
+  margin-top: 50px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c-checkbox__area {
+  position: relative;
+  width: 30%;
+  background-color: #f6f5f4;
+  float: left;
+  min-height: 500px;
+}
+
+.c-select-currency {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.c-select-currency__title {
+  display: block;
+  font-size: 18px;
+  line-height: 18px;
+  margin-bottom: 20px;
+}
+
+.c-trend-ranking {
+  position: relative;
+  width: 70%;
+  float: left;
+  min-height: 500px;
+  background-color: #f2f2ff;
+}
+
+.c-checkbox__container {
+  display: block;
+  line-height: 30px;
+}
+
+.c-checkbox__item {
+  font-size: 16px;
+}
+
+.c-checkbox__label {
+  position: relative;
+}
+
+.c-term__container {
+  margin-top: 15px;
+  margin-left: 15px;
+  display: flex;
+  justify-content: left;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.c-term__select {
+  margin-left: 10px;
+}
+
+.c-selectbox__area {
+  position: relative;
+  width: 200px;
+  height: 28px;
+  top: -5px;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.c-time {
+  position: absolute;
+  top: 45px;
+  right: 10px;
+}
+
+.c-time__label {
+  font-size: 14px;
+}
+
+.c-currency-table {
+  width: 98%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c-currency-table__header {
+  background-color: #f6f5f4;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.c-currency-table__title {
+  border: 1px solid;
+}
+
+.c-currency-table__row {
+  background-color: #fff;
+  height: 28px;
+  line-height: 28px;
+}
+
+.c-currency-table__data {
+  border: 1px solid;
+}
+
+.c-currency-table__data.u-text-center {
+  text-align: center;
+}
+
+.c-currency-table__data.u-text-right {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.c-button__select {
+  padding: 5px;
+  font-size: 14px;
+  border-style: none;
+  cursor: pointer;
+  margin-left: 4px;
+  margin-bottom: 5px;
+}
+
+.c-button__select.is-all {
+  background-color: #5555aa;
+  color: #f6f5f4;
+  transition: 0.2s;
+}
+
+.c-button__select.is-all:hover {
+  background-color: #36366e;
+  transition: 0.2s;
+}
+
+.c-button__select.is-cancel {
+  margin-left: 10px;
+  background-color: #a18b28;
+  color: #f6f5f4;
+  transition: 0.2s;
+}
+
+.c-button__select.is-cancel:hover {
+  background-color: #584c15;
+  transition: 0.2s;
+}
+
+.c-account-list__container {
+  width: 980px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.c-account-table {
+  width: 100%;
+}
+
+.c-account-table__header {
+  margin-bottom: 10px;
+  background-color: #4aace4;
+  color: #f6f5f4;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.c-account-table__title {
+  padding-right: 5px;
+  border: solid 1px #f6f5f4;
+  border-collapse: collapse;
+}
+
+.c-account-table__title:last-child {
+  padding-right: 0;
+}
+
+.c-account-table__data {
+  border: solid 1px #f6f5f4;
+  border-collapse: collapse;
+}
+
+.c-account-table__data:last-child {
+  border: none;
+}
+
+.c-account-table__data.is-right {
+  text-align: right;
+  padding-right: 10px;
+  font-size: 14px;
+}
+
+.c-account-table__textarea {
+  border: solid 1px #f6f5f4;
+  border-collapse: collapse;
+  color: #555;
+  vertical-align: middle;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #f6fbff;
+  font-size: 14px;
+}
+
+.c-button__follow {
+  height: 42px;
+  margin-left: 5px;
+  text-align: center;
+  vertical-align: middle;
+  color: #f6f5f4;
+  background-color: #4aace4;
+  border: none;
+  transition: 0.2s;
+  font-size: 10px;
+  width: 52px;
+}
+
+.c-button__follow:hover {
+  background: #31749b;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.c-button__unfollow {
+  height: 42px;
+  margin-left: 5px;
+  text-align: center;
+  vertical-align: middle;
+  color: #f6f5f4;
+  background-color: #f09a72;
+  border: none;
+  transition: 0.2s;
+  font-size: 10px;
+  width: 52px;
+}
+
+.c-button__unfollow:hover {
+  background: #ac6c4f;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.c-register-twitter__container {
+  width: 600px;
+  height: 500px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c-register-twitter-form {
+  position: relative;
+  width: 60%;
+  height: 60%;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c-register-twitter-form__label {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.c-register-twitter-form__input {
+  width: 81%;
+  line-height: 32px;
+  font-size: 16px;
+}
+
+.c-register-twitter-form__submit {
+  width: 15%;
+  padding: 8px 10px;
+  font-size: 14px;
+  background-color: #2b2b36;
+  color: #f7f7f7;
+  border-style: none;
+  transition: 0.2s;
+}
+
+.c-register-twitter-form__submit:hover {
+  cursor: pointer;
+  background-color: #fcf29b;
+  color: #363232;
+  transition: 0.2s;
+}
+
+.c-news__container {
+  width: 980px;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c-news__header {
+  display: flex;
+  justify-content: stretch;
+  border-bottom: solid 3px #777;
+}
+
+.c-news__label {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  margin-bottom: 5px;
+  width: 980px;
+}
+
+.c-news__item {
+  margin-left: 10px;
+}
+
+.c-news__item--title {
+  resize: none;
+  white-space: pre;
+  overflow-x: auto;
+  line-height: 24px;
+  font-size: 16px;
+  color: #555;
+  transition: 0.2s;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: dotted 1px #36366e;
+}
+
+.c-news__item--title:hover {
+  cursor: pointer;
+  color: #1326cc;
+  transition: 0.2s;
+}
+
+.c-news__item--pubdate {
+  font-size: 12px;
+}
+
+.c-news-page {
+  position: relative;
+  width: 350px;
+}
+
+.c-news-page__label {
+  display: inline-block;
+}
+
+.c-news-page__button {
+  height: 32px;
+}
+
+.c-twitter-auth {
+  width: 980px;
+  height: 600px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c-twitter-auth__information {
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #555;
+  margin-top: 100px;
+  margin-bottom: 15px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c-twitter-auth__information--title {
+  font-size: 24px;
+  margin-bottom: 30px;
+  margin-left: -10px;
+  border-bottom: solid 1px #143aaf;
+  width: 40%;
+  line-height: 1.5em;
+}
+
+.c-twitter-auth__submit {
+  position: relative;
+  width: 82px;
+  height: 46px;
+  line-height: 46px;
+  color: #f6f5f4;
+  border-style: none;
+  background-color: #4aace4;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.2s;
+}
+
+.c-twitter-auth__submit.is-auth {
+  background-color: #a1a1a1;
+}
+
+.c-twitter-auth__submit:hover {
+  background: #33779e;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.c-twitter-auth__link {
+  color: #f6f5f4;
+  padding: 15px 7px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.c-twitter-auth__link:hover {
+  color: #f6f5f4;
+}
+
+.c-flash-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: rgba(10, 25, 232, 0.6);
+  display: none;
+  z-index: 2;
+}
+
+.c-flash-message__text {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 18px;
+  color: #efefef;
+  line-height: 60px;
+}
+
+.c-auto-follow {
+  align-items: center;
+  display: flex;
+  position: relative;
+  width: 300px;
+  margin-bottom: 5px;
+}
+
+.c-auto-follow__label {
+  font-size: 14px;
+}
+
+.c-auto-follow__submit {
+  height: 32px;
+  border-style: none;
+  transition: 0.2s;
+}
+
+.c-auto-follow__submit:hover {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.c-auto-follow__submit.to-disable {
+  background-color: #8d8b8b;
+  color: #f6f5f4;
+}
+
+.c-auto-follow__submit.to-disable:hover {
+  background-color: #615e5e;
+}
+
+.c-auto-follow__submit.to-enable {
+  background-color: #1822ad;
+  color: #f6f5f4;
+}
+
+.c-auto-follow__submit.to-enable:hover {
+  background-color: #101774;
+}
+
+.c-remainder {
+  position: relative;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.c-remainder__input {
+  font-size: 16px;
+  height: 30px;
+  width: 300px;
+}
+
+.c-remainder__submit {
+  position: relative;
+  width: 229px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.c-remainder__container {
+  position: relative;
+  width: 580px;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  display: flex;
+  background-color: #eef6f7;
+}
+
+.c-remainder__form {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.c-remainder__title {
+  color: #616265;
+  font-size: 16px;
+  margin-left: 15px;
+  position: relative;
+  width: 145px;
+  background-color: #8eefc6;
+  padding: 5px 5px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.c-reset {
+  position: relative;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.c-reset__label {
+  width: 150px;
+  display: inline-block;
+}
+
+.c-reset__input {
+  font-size: 16px;
+  height: 30px;
+  width: 300px;
+  display: inline-block;
+}
+
+.c-reset__title {
+  color: #616265;
+  font-size: 16px;
+  margin-left: 15px;
+  position: relative;
+  width: 145px;
+  background-color: #8eefc6;
+  padding: 5px 5px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.c-reset__input-block {
+  margin-bottom: 15px;
+}
+
+.c-reset__submit {
+  margin-left: auto;
+  width: 173px;
+}
+
+.c-reset--error {
+  color: red;
+  display: block;
+  font-size: 16px;
+  position: absolute;
+  top: -30px;
+  width: 500px;
+}
+
+.c-reset__container {
+  position: relative;
+  width: 580px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  display: flex;
+  background-color: #eef6f7;
+}
+
+.c-reset__form {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.p-message__item {
+  display: block;
+}
+
+.p-icon__check {
+  color: #105210;
+  margin-right: 15px;
+}
+
+.p-appeal__container {
+  margin-top: 100px;
+}
+
+.p-hero {
+  background-image: url(/images/hero2.jpg?377f67a3111410e81d5edf60cdd9c44d);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 800px;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-blend-mode: lighten;
+}
+
+.p-hero__title {
+  position: relative;
+  z-index: 1;
+}
+
+.p-hero__title.is-center {
+  top: 380px;
+  color: #fffef9;
+  font-size: 55px;
+  font-family: "Shadows Into Light", cursive;
+  text-align: center;
+  font-weight: bold;
+}
+
+.p-hero-title__contaier {
+  position: relative;
+}
+
+.p-header__title {
+  margin-left: 10px;
+  font-size: 24px;
+  font-family: "Prompt", sans-serif;
+}
+
+.p-appeal {
+  position: relative;
+  box-sizing: border-box;
+  width: 980px;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.p-appeal:first-child {
+  margin-top: 0;
+}
+
+.p-appeal.is-left {
+  margin-left: 100px;
+}
+
+.p-appeal.is-right {
+  margin-right: 100px;
+  margin-left: auto;
+}
+
+.p-appeal__title {
+  position: absolute;
+  top: -7px;
+  right: 0;
+  font-size: 40px;
+  font-style: italic;
+  color: #555;
+}
+
+.p-appeal__title .is-red {
+  font-size: 80px;
+  color: #f11414bd;
+}
+
+.p-appeal__image {
+  width: 100%;
+  border-radius: 3px;
+}
+
+.p-appeal__text {
+  width: 530px;
+  line-height: 1.5em;
+  font-size: 16px;
+  margin-left: 40px;
+}
+
+.p-appeal__message {
+  display: block;
+  margin-top: 10px;
+}
+
+.p-image__container {
+  position: relative;
+  width: 450px;
+  border-radius: 3px;
+}
+
+.p-title__icon {
+  height: 24px;
+  position: relative;
+  top: 3px;
+}
+
+.p-text__title {
+  font-size: 24px;
+  color: #921515;
+  font-style: bold;
+}
+
+.u-margin-top--100 {
+  margin-top: 100px;
+}
+
+.u-btn__login {
+  background-color: #f6f5f4;
+  border-style: none;
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 234px;
+  transition: 0.2s;
+  width: 80px;
+}
+
+.u-btn__login:hover {
+  background-color: #b3b2b2;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.u-btn__submit {
+  height: 30px;
+  background-color: #1193bb;
+  color: #f6f5f4;
+  border-style: none;
+  transition: 0.2s;
+}
+
+.u-btn__submit:hover {
+  cursor: pointer;
+  background-color: #0b5970;
+  transition: 0.2s;
+}
+
+.u-invalid--error {
+  color: red;
+  display: block;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 32px;
+  width: 500px;
+}
+
+.u-font-size__12px {
+  font-size: 12px;
+}
+
+.u-width__192px {
+  width: 192px;
+}
+
+.pagination {
+  display: flex;
+  font-size: 18px;
+  height: 30px;
+  justify-content: center;
+  line-height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  overflow: hidden;
+  position: relative;
+  width: 420px;
+}
+
+.page-item {
+  float: left;
+  margin-left: 10px;
+}
+
+.page-item:first-child {
+  margin-left: 0;
+}
+
+.page-item.active {
+  font-weight: bold;
+  font-size: 24px;
+}
+

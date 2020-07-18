@@ -1,0 +1,24 @@
+// ===================================
+// base
+// ===================================
+html, body {
+  width: 100%;
+  color: $font-color_default;
+  font-size: $font-size-default;
+  line-height: $font-size-default;
+  font-family: $font-family-default;
+}
+
+p, a {
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $font-color_default;
+  text-decoration: none;
+  transition: .3s;
+}
+
+a:hover {
+  color: $color-accent;
+}
