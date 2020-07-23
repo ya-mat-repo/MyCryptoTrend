@@ -1,0 +1,159 @@
+.c-account-list__container {
+  width: $site-width;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: $space_m;
+
+  @include mq() {
+    width: 100%;
+  }
+}
+
+.c-account-table {
+  width: 100%;
+
+  &__header {
+      margin-bottom: $space_m;
+      background-color: #4aace4;
+      color: #f6f5f4;
+      height: 28px;
+      line-height: 28px;
+      text-align: center;
+      font-size: $font-size_m;
+
+      @include mq() {
+        height: initial;
+        line-height: initial;
+      }
+  }
+
+  &__title {
+      padding-right: $space_s;
+      border: solid 1px #f6f5f4;
+      border-collapse: collapse;
+
+      @include mq() {
+        font-size: 12px;
+      }
+
+      &:last-child {
+          padding-right: 0;
+      }
+  }
+
+  &__row {
+    @include mq() {
+      font-size: 12px;
+    }
+  }
+
+  &__data {
+      border: solid 1px #f6f5f4;
+      border-collapse: collapse;
+
+      &:last-child {
+          border: none;
+      }
+
+      &.is-right {
+          text-align: right;
+          padding-right: $space_m;
+          font-size: $font-size_m;
+      }
+  }
+
+  &__textarea {
+      border: solid 1px #f6f5f4;
+      border-collapse: collapse;
+      color: #555;
+      vertical-align: middle;
+      box-sizing: border-box;
+      width: 100%;
+      background-color: #f6fbff;
+      font-size: $font-size_m;
+
+      @include mq() {
+        font-size: 12px;
+      }
+  }
+}
+
+.c-button__follow {
+  height: 42px;
+  margin-left: $space_s;
+  text-align: center;
+  vertical-align: middle;
+  color: #f6f5f4;
+  background-color: #4aace4;
+  border: none;
+  transition: .2s;
+  font-size: 10px;
+  width:52px;
+
+  &:hover {
+      background: #31749b;
+      cursor: pointer;
+      transition: .2s;
+  }
+}
+
+.c-button__unfollow {
+  height: 42px;
+  margin-left: $space_s;
+  text-align: center;
+  vertical-align: middle;
+  color: #f6f5f4;
+  background-color: #f09a72;
+  border: none;
+  transition: .2s;
+  font-size: 10px;
+  width:52px;
+
+  &:hover {
+      background: #ac6c4f;
+      cursor: pointer;
+      transition: .2s;
+  }
+}
+
+.c-auto-follow {
+  align-items: center;
+  display: flex;
+  position: relative;
+  width: 300px;
+  margin-bottom: $space_s;
+
+  &__label {
+    font-size: $font-size_m;
+  }
+  
+  &__submit {
+    height: 32px;
+    border-style: none;
+    transition: .2s;
+
+    &:hover {
+      cursor: pointer;
+      transition: .2s;
+    }
+    
+    &.to-disable {
+      background-color: #8d8b8b;
+      color: #f6f5f4;
+
+      &:hover {
+        background-color: #615e5e;
+      }
+    }
+
+    &.to-enable {
+      background-color: #1822ad;
+      color: #f6f5f4;
+      
+      &:hover {
+        background-color: #101774;
+      }
+    }
+  }
+}

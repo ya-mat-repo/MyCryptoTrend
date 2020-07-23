@@ -4,32 +4,33 @@
 @endcomponent
 
 <body>
-    @component('components.header')
+    @component('components.header_relative')
     @endcomponent
 
-    <main>
-        <div class="c-twitter-auth">
-            @if (session()->has('flash_message'))
-                <div class="c-flash-message js-flash_message">
-                    <h2 class="c-flash-message__text">{{session('flash_message')}}</h2>
-                </div>
-            @endif
+    <div id="app">
+        <main>
+            <div class="c-twitter-auth">
+                @if (session()->has('flash_message'))
+                    <div class="c-flash-message js-flash_message">
+                        <h2 class="c-flash-message__text">{{session('flash_message')}}</h2>
+                    </div>
+                @endif
 
-            <div class="c-twitter-auth__information">
-                <h2 class="c-twitter-auth__information--title">Twitterアカウントの認証</h2>
-                {{-- <p>Twitterアカウントの認証を行うことで、アカウント一覧画面から他のTwitterアカウントをフォローすることができます。</p>
-                <p>また、Twitterアカウントの自動フォロー機能を使うためにも事前にTwitterアカウントの認証が必要です。</p> --}}
-                Twitterアカウントの認証を行うことで、アカウント一覧画面から他のTwitterアカウントをフォローすることができます。
-                また、Twitterアカウントの自動フォロー機能を使うためにも事前にTwitterアカウントの認証が必要です。
-                認証を行う場合は以下の「認証する」をクリックしてください。(認証できるTwitterアカウントは1つです。)
+                <div class="c-twitter-auth__information">
+                    <h2 class="c-twitter-auth__information--title">Twitterアカウントの認証</h2>
+                    Twitterアカウントの認証を行うことで、アカウント一覧画面から他のTwitterアカウントをフォローすることができます。
+                    また、Twitterアカウントの自動フォロー機能を使うためにも事前にTwitterアカウントの認証が必要です。
+                    認証を行う場合は以下の「認証する」をクリックしてください。(認証できるTwitterアカウントは1つです。)
+                </div>
+                @if ($is_twitter_auth)
+                    <button class="c-twitter-auth__submit is-auth" name="submit">認証済み</button>
+                @else
+                    <button class="c-twitter-auth__submit" name="submit"><a class="c-twitter-auth__link" href="{{route('get_request_token')}}">認証する</a></button>
+                @endif
             </div>
-            @if ($is_twitter_auth)
-                <button class="c-twitter-auth__submit is-auth" name="submit">認証済み</button>
-            @else
-                <button class="c-twitter-auth__submit" name="submit"><a class="c-twitter-auth__link" href="{{route('get_request_token')}}">認証する</a></button>
-            @endif
-        </div>
-    </main>
+
+        </main>
+    </div>
 
     @component('components.footer')
     @endcomponent

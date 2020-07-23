@@ -15,17 +15,21 @@ use App\Library\Common;
 
 class AccountListController extends Controller
 {
+    /*
+    |--------------------------------------------------------------------------
+    | ツイッターアカウント一覧表示用のコントローラー
+    |--------------------------------------------------------------------------
+    */
+
+    /**
+     * フォロー対象候補のユーザーを表示する
+     */
     public function list()
     {
         $perPage = 10; // 1ページあたりの表示数
         $email = Auth::user()->email;
 
         // Twitter認証が済んでいるかチェック
-        // 変数名がスネークケースでなければvueに渡せなかった
-        // ここはかなりハマるところなので気を付ける！
-        // $isAuth = (empty(TwitterAuth::where('email', $email)->first())) ? 'NG' : 'OK';
-        // $is_twitter_auth = (empty(TwitterAuth::where('email', $email)->first())) ? 'hoge' : 'foo';
-        // $isAuth = (empty(TwitterAuth::where('email', $email)->first())) ? 'false' : 'true';
         $is_twitter_auth = (empty(TwitterAuth::where('email', $email)->first())) ? false : true;
         Log::debug('$is_twitter_auth = ' . $is_twitter_auth);
 
@@ -43,22 +47,14 @@ class AccountListController extends Controller
             $candidates = DB::table('candidates')->orderBy('candidates.followers_count', 'DESC')->paginate($perPage);
         }
 
-        // $candidates = DB::table('candidates')
-        //                 ->leftJoin('followed_accounts', 'candidates.twitter_user_name', '=', 'followed_accounts.twitter_user_name')
-        //                 // ->where('followed_accounts.email', '=', $email)
-        //                 ->select('candidates.*', 'followed_accounts.is_follow_flag')
-        //                 ->paginate($perPage);
-        // Log::debug('$candidates = ' . print_r($candidates, true));
         $is_auto_follow = Auth::user()->is_auto_follow;
         Log::debug('>>> $is_auto_follow = ' . $is_auto_follow);
-        // Log::debug('===== Config::get(app.key) = ' . \Config::get('app.key'));
-        // $access_token = Common::getDecryptAccessToken(Auth::user()->email);
-        // Log::debug('$access_token = ' . $access_token);
-        // $access_token_secret = Common::getDecryptAccessTokenSecret(Auth::user()->email);
-        // Log::debug('$access_token_secret = ' . $access_token_secret);
         return view('list', compact('candidates', 'is_twitter_auth', 'is_auto_follow'));
     }
 
+    /**
+    * アカウント一覧からフォローするを実行したアカウントをフォローする
+    */
     public function followAccount(Request $request)
     {
         $api_key = 'u8GXSucbr7JvGzWb2TonppQgL';
@@ -133,6 +129,9 @@ class AccountListController extends Controller
         return back()->with(compact('flash_message'));
     }
 
+    /**
+    * アカウント一覧からフォロー解除を実行したアカウントをアンフォローする
+    */
     public function unfollowAccount(Request $request)
     {
         $api_key = 'u8GXSucbr7JvGzWb2TonppQgL';
@@ -176,6 +175,9 @@ class AccountListController extends Controller
         return back()->with(compact('flash_message'));
     }
     
+    /**
+    * 自動フォローの状態（有効/無効）を変更する
+    */
     public function autoFollow(Request $request)
     {
         $is_enable = $request->is_enable;

@@ -1,0 +1,174 @@
+.p-message__item {
+  display: block;
+  
+}
+
+.p-icon__check {
+  color: $color-main;
+  margin-right: $space_xxl;
+
+  @include mq() {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+}
+
+.p-appeal__container {
+  margin-top: $space_100;
+
+
+  @include mq() {
+    margin-top: 50px;
+  }
+}
+
+.p-hero {
+  background-image: url('../../../../public/img/hero2.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 800px;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-blend-mode: lighten;
+
+  @include mq() {
+    height: 80vh;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+
+    
+    &.is-center {
+      color: $color-base;
+      font-size: 55px;
+      font-family: 'Shadows Into Light', cursive;
+      line-height: 800px;
+      text-align: center;
+      font-weight: bold; 
+
+      @include mq() {
+        font-size: 38px;
+        line-height: 80vh;
+      }
+    }
+  }
+
+  &-title__contaier {
+    position: relative;
+  }
+}
+
+.p-appeal {
+  position: relative;
+  box-sizing: border-box;
+  width: $site-width;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+
+  @include mq() {
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &.is-left {
+    margin-left: $space_100;
+
+    @include mq() {
+      margin-left: initial;
+    }
+  }
+  
+  &.is-right {
+    margin-right: $space_100;
+    margin-left: auto;
+
+    @include mq() {
+      margin-right: initial;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: -7px;
+    right: 0;
+    font-size: $space_3l;
+    font-style: italic;
+    color: $font-color-default;
+
+    @include mq() {
+      top: -24px;
+      left: 0;
+      font-size: 24px;
+    }
+
+    & .is-red {
+      font-size: 80px;
+      color: #f11414bd;
+
+      @include mq() {
+        font-size: 42px;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: 3px;
+  }
+
+  &__text {
+    width: 530px;
+    line-height: 1.5em;
+    font-size: $font-size_default;
+    margin-left: $space_3l;
+
+    @include mq() {
+      color: #545454;
+      position: absolute;
+      width: 90%;
+      margin-left: initial;
+      font-size: 16px;
+      background-color: rgba(255,255,255,0.7);
+      top: 10px;
+    }
+  }
+
+  &__message {
+    display: block;
+    margin-top: $space_m;
+  }
+}
+
+.p-image__container {
+  position: relative;
+  width: 450px;
+  border-radius: 3px;
+}
+
+.p-title__icon {
+  height: 24px;
+  position: relative;
+  top: 3px;
+
+  @include mq() {
+    height: 20px;
+    left: 1px;
+  }
+}
+
+.p-text__title {
+  font-size: $font-size_xl;
+  color: #921515;
+
+  @include mq() {
+    font-size: 18px;
+  }
+}

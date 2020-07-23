@@ -1,0 +1,77 @@
+.c-twitter-auth {
+  width: $site-width;
+  height: 600px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq() {
+      width: 100%;
+      height: initial;
+  }
+
+  &__information {
+      font-size: $font-size_default;
+      line-height: 1.5em;
+      color: #555;
+      margin-top: 100px;
+      margin-bottom: $space_l;
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+
+      @include mq() {
+          width: 80%;
+      }
+
+      &--title {
+          font-size: $font-size_xl;
+          margin-bottom: $space_xxl;
+          margin-left: -10px;
+          border-bottom: solid 1px #143aaf;
+          width: 40%;
+          line-height: 1.5em;
+
+          @include mq() {
+              width: 100%;
+              font-size: 20px;
+              text-align: center;
+          }
+      }
+  }
+
+  &__submit {
+      position: relative;
+      width: 82px;
+      height: 46px;
+      line-height: 46px;
+      color: #f6f5f4;
+      border-style: none;
+      background-color: #4aace4;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      transition: .2s;
+      
+      &.is-auth {
+          background-color: #a1a1a1;
+      }
+
+      &:hover {
+          background: #33779e;
+          cursor: pointer;
+          transition: .2s;    
+      }
+  }
+
+  &__link {
+      color: #f6f5f4;
+      padding: 15px 7px;
+      font-size: $font-size_m;
+      font-weight: bold;
+      
+      &:hover {
+          color: #f6f5f4;
+      }
+  }
+}

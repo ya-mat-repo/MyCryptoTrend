@@ -25,7 +25,6 @@ Vue.component('index-component', require('./components/IndexComponent.vue').defa
 Vue.component('show-trend-component', require('./components/ShowTrendComponent.vue').default);
 Vue.component('account-list-component', require('./components/AccountListComponent.vue').default);
 Vue.component('news-list-component', require('./components/NewsListComponent.vue').default);
-Vue.component('register-twitter-account-component', require('./components/RegisterTwitterAccountComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -36,5 +35,3 @@ Vue.component('register-twitter-account-component', require('./components/Regist
 const app = new Vue({
     el: '#app',
 });
-
-// import "./main";

@@ -1,0 +1,87 @@
+.c-base__container {
+  position: relative;
+  width: $site-width;
+  margin-top: 50px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c-strength-container {
+  align-items: center;
+  background-blend-mode: lighten;
+  background-color: rgba(255, 255, 255, 0.6);
+  background-image: url(../../../../public/img/eucalyptus_m.jpg);
+  box-shadow: 0 10px 10px -3px rgb(161, 159, 197, 0.4);
+  display: flex;
+  height: 250px;
+  justify-content: center;
+  margin-top: $space_3l;
+  transition: .3s;
+  
+  &:hover {
+    transition: .3s;
+    box-shadow: 0 10px 10px 10px rgb(161, 159, 197, 0.4);
+  }
+  
+  &__text {
+    font-size: $font-size_xl;
+    line-height: 3em;
+
+    @include mq() {
+      position: absolute;
+      font-size: $font-size_m;
+      line-height: 4em;
+    }
+  }
+
+  &__label {
+    background-color: #ecfdd5;
+    font-size: 24px;
+    left: -10%;
+    line-height: 35px;
+    padding: 2px 10px;
+    position: relative;
+    top: -49%;
+
+    @include mq() {
+      font-size: 16px;
+      left: initial;
+      width: 386px;
+    }
+  }
+}
+
+.c-register__btn {
+  width: 280px;
+  height: 84px;
+  line-height: 84px;
+  font-size: $font-size_xl;
+  background-color: #f11414bd;
+  color: $color-base;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: $space_3l;
+  border-radius: 15px;
+  box-shadow: 0 0 3px 0 rgba(0,0,0,.12), 0 2px 3px 0 rgba(0,0,0,.22);
+  transition: .3s;
+
+  @include mq() {
+    font-size: 18px;
+    height: 60px;
+    line-height: 60px;
+    margin-top: 50px;
+    width: 60%;
+  }
+  
+  &:hover {
+    box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
+	  transform: translateY(-4px);
+  }
+
+  & a {
+    padding: 30px;
+  }
+}

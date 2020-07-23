@@ -54,18 +54,15 @@ class Kernel extends ConsoleKernel
             while (true) {
                 Log::debug('>>>>>>>>>> 「' . $keyword . '」を含むユーザーを検索します('.$page.'ページ目)。 >>>>>>>>>>');
                 $candidates = $connect->get('users/search', $params);
-                // Log::debug('>>>>> $candidates = ' . print_r($candidates, true));
                 if (is_array($candidates)) {
                     Log::debug('>>>>> count($candidates = ' . count($candidates));
                 }
-                // Log::debug('>>>>> empty($candidates) = ' . empty($candidates));
                 if (empty($candidates)) {
                     break;
                 }
                 foreach ($candidates as $key => $candidate) {
                     Log::debug('>>>>> Current user is [' . $candidate->screen_name . '].');
                     Log::debug('$candidate_'.$key.' = '. print_r($candidate, true));
-                    // Log::debug('>>>>> $candidate->status = ' . print_r($candidate->status, true));
                     // 最新ツイートがある程度過去の場合、当該ユーザーのstatusプロパティは存在しないため固定の文言(No Data)を設定する
                     if (property_exists($candidate, 'status')) {
                         $latest_tweet = $candidate->status->text;
@@ -98,7 +95,7 @@ class Kernel extends ConsoleKernel
                 $page += 1;
                 $params['page'] = $page;
             }
-        })->dailyAt('19:23');
+        })->dailyAt('4:00');
 
         // ==========================================
         // Twitterアカウント自動フォロー処理
@@ -117,21 +114,12 @@ class Kernel extends ConsoleKernel
             $target_users = DB::table('users')->where('is_auto_follow', true)->get();
             
             foreach ($target_users as $user) {
-                // Log::debug('===== Config::get(app.key) = ' . \Config::get('app.key'));
                 $email = $user->email;
                 Log::debug('===== $email = ' . $email);
-                // $access_token = Crypt::decryptString(TwitterAuth::where('email', $email)->value('access_token'));
-                // $access_token = Common::getDecryptAccessToken($email);
                 $access_token = base64_decode(TwitterAuth::where('email', $email)->value('access_token'));
                 Log::debug('===== $access_token = ' . $access_token);
-                // $access_token_secret = Crypt::decryptString(TwitterAuth::where('email', $email)->value('access_token_secret'));
-                // $access_token_secret = Common::getDecryptAccessTokenSecret($email);
                 $access_token_secret = base64_decode(TwitterAuth::where('email', $email)->value('access_token_secret'));
                 Log::debug('===== $access_token_secret = ' . $access_token_secret);
-                // $access_token = decrypt(TwitterAuth::where('email', $email)->value('access_token'));
-                // Log::debug('===== $access_token = ' . $access_token);
-                // $access_token_secret = decrypt(TwitterAuth::where('email', $email)->value('access_token_secret'));
-                // Log::debug('===== $access_token_secret = ' . $access_token_secret);
                 
                 // フォロー対象（フォロー未済）のアカウントを検索
                 $followed_this_user = DB::table('followed_accounts')
@@ -175,7 +163,6 @@ class Kernel extends ConsoleKernel
                     $is_exist_account = DB::table('followed_accounts')
                                         ->where('id', $candidate->followed_account_id)
                                         ->exists();
-                    // $followed_account = DB::table('followed_accounts')->find($candidate->followed_account_id);
                     $followed_account = FollowedAccount::where('id', $candidate->followed_account_id)->first();
                     if (empty($followed_account)) {
                         FollowedAccount::create([
@@ -193,8 +180,7 @@ class Kernel extends ConsoleKernel
             }
             Log::debug('===== End auto follow process. =====');
         // 1000account/1dayの上限があるため30分間隔で実行
-        // })->everyThirtyMinutes();
-        })->dailyAt('12:38');
+        })->everyThirtyMinutes();
 
         // ==========================================
         // 通貨別ツイート数取得処理
@@ -250,8 +236,6 @@ class Kernel extends ConsoleKernel
                     // 'q' => $value,
                     'lang' => 'ja',
                     'count' => TWEET_COUNT_PER_REQUEST,
-                    // 'since' => '2020-06-20_0:00:00_JST',
-                    // 'until' => '2020-06-20_12:00:00_JST',
                 ];
                 while (true) {
                     $tweets_response = $connect->get('search/tweets', $params);
@@ -300,7 +284,7 @@ class Kernel extends ConsoleKernel
                 }
             }
         // })->twiceDaily(5, 17);
-        })->dailyAt('0:16');
+        })->dailyAt('0:00');
 
         // 過去一日分
         $schedule->call(function() {

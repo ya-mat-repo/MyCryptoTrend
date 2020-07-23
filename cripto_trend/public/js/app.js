@@ -2311,37 +2311,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RegisterTwitterAccountComponent.vue?vue&type=script&lang=js&":
-/*!******************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/RegisterTwitterAccountComponent.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  props: [],
-  data: function data() {
-    return {};
-  },
-  methods: {}
-});
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ShowTrendComponent.vue?vue&type=script&lang=js&":
 /*!*****************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ShowTrendComponent.vue?vue&type=script&lang=js& ***!
@@ -2351,13 +2320,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -38752,63 +38714,6 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RegisterTwitterAccountComponent.vue?vue&type=template&id=adef5bb6&":
-/*!**********************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/RegisterTwitterAccountComponent.vue?vue&type=template&id=adef5bb6& ***!
-  \**********************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "c-register-twitter__container" }, [
-      _c("div", { staticClass: "c-register-twitter-form" }, [
-        _c("form", { attrs: { method: "POST", action: "/registration_tw" } }, [
-          _c("h2", { staticClass: "c-register-twitter-form__label" }, [
-            _vm._v("Twitterアカウント登録")
-          ]),
-          _vm._v(" "),
-          _c("input", {
-            staticClass: "c-register-twitter-form__input",
-            attrs: {
-              type: "text",
-              name: "twitterAccount",
-              placeholder: "ツイッターアカウントを入力"
-            }
-          }),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "c-register-twitter-form__submit",
-              attrs: { type: "submit", name: "submit" }
-            },
-            [_vm._v("登録")]
-          )
-        ])
-      ])
-    ])
-  }
-]
-render._withStripped = true
-
-
-
-/***/ }),
-
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ShowTrendComponent.vue?vue&type=template&id=09fd3130&":
 /*!*********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ShowTrendComponent.vue?vue&type=template&id=09fd3130& ***!
@@ -38824,280 +38729,284 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "c-base__container" }, [
-    _c("div", { staticClass: "c-checkbox__area" }, [
-      _c(
-        "div",
-        { staticClass: "c-select-currency" },
-        [
-          _c("h2", { staticClass: "c-select-currency__title" }, [
-            _vm._v("対象の通貨を選択")
-          ]),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "c-button__select is-all",
-              on: { click: _vm.selectAll }
-            },
-            [_vm._v("全て選択")]
-          ),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "c-button__select is-cancel",
-              on: { click: _vm.cancelAll }
-            },
-            [_vm._v("全て解除")]
-          ),
-          _vm._v(" "),
-          _vm._l(_vm.currencyName, function(value, key) {
-            return _c(
-              "div",
-              { key: key, staticClass: "c-checkbox__container" },
-              [
-                _c("input", {
+  return _c("div", { staticClass: "c-background__container" }, [
+    _c("div", { staticClass: "c-home__container" }, [
+      _c("div", { staticClass: "c-checkbox__area" }, [
+        _c(
+          "div",
+          { staticClass: "c-select-currency" },
+          [
+            _c("h2", { staticClass: "c-select-currency__title" }, [
+              _vm._v("通貨を選択")
+            ]),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "c-button__select is-all",
+                on: { click: _vm.selectAll }
+              },
+              [_vm._v("全て選択")]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "c-button__select is-cancel",
+                on: { click: _vm.cancelAll }
+              },
+              [_vm._v("全て解除")]
+            ),
+            _vm._v(" "),
+            _vm._l(_vm.currencyName, function(value, key) {
+              return _c(
+                "div",
+                { key: key, staticClass: "c-checkbox__container" },
+                [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.checkBtn[key],
+                        expression: "checkBtn[key]"
+                      }
+                    ],
+                    staticClass: "c-checkbox__item",
+                    attrs: { type: "checkbox", value: "key" },
+                    domProps: {
+                      checked: Array.isArray(_vm.checkBtn[key])
+                        ? _vm._i(_vm.checkBtn[key], "key") > -1
+                        : _vm.checkBtn[key]
+                    },
+                    on: {
+                      change: function($event) {
+                        var $$a = _vm.checkBtn[key],
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = "key",
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 &&
+                              _vm.$set(_vm.checkBtn, key, $$a.concat([$$v]))
+                          } else {
+                            $$i > -1 &&
+                              _vm.$set(
+                                _vm.checkBtn,
+                                key,
+                                $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                              )
+                          }
+                        } else {
+                          _vm.$set(_vm.checkBtn, key, $$c)
+                        }
+                      }
+                    }
+                  }),
+                  _c("span", { staticClass: "c-checkbox__label" }, [
+                    _vm._v(_vm._s(value)),
+                    _c("br", { staticClass: "u-sp-break" }),
+                    _vm._v("(" + _vm._s(key) + ")")
+                  ])
+                ]
+              )
+            })
+          ],
+          2
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "c-trend-ranking" }, [
+        _c("div", { staticClass: "c-term" }, [
+          _c("div", { staticClass: "c-term__container" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c("div", { staticClass: "c-term__select" }, [
+              _c(
+                "select",
+                {
                   directives: [
                     {
                       name: "model",
                       rawName: "v-model",
-                      value: _vm.checkBtn[key],
-                      expression: "checkBtn[key]"
+                      value: _vm.term,
+                      expression: "term"
                     }
                   ],
-                  staticClass: "c-checkbox__item",
-                  attrs: { type: "checkbox", value: "key" },
-                  domProps: {
-                    checked: Array.isArray(_vm.checkBtn[key])
-                      ? _vm._i(_vm.checkBtn[key], "key") > -1
-                      : _vm.checkBtn[key]
-                  },
+                  staticClass: "c-selectbox__area",
                   on: {
                     change: function($event) {
-                      var $$a = _vm.checkBtn[key],
-                        $$el = $event.target,
-                        $$c = $$el.checked ? true : false
-                      if (Array.isArray($$a)) {
-                        var $$v = "key",
-                          $$i = _vm._i($$a, $$v)
-                        if ($$el.checked) {
-                          $$i < 0 &&
-                            _vm.$set(_vm.checkBtn, key, $$a.concat([$$v]))
-                        } else {
-                          $$i > -1 &&
-                            _vm.$set(
-                              _vm.checkBtn,
-                              key,
-                              $$a.slice(0, $$i).concat($$a.slice($$i + 1))
-                            )
-                        }
-                      } else {
-                        _vm.$set(_vm.checkBtn, key, $$c)
-                      }
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.term = $event.target.multiple
+                        ? $$selectedVal
+                        : $$selectedVal[0]
                     }
                   }
-                }),
-                _c("span", { staticClass: "c-checkbox__label" }, [
-                  _vm._v(_vm._s(value) + "(" + _vm._s(key) + ")")
-                ])
-              ]
-            )
-          })
-        ],
-        2
-      )
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "c-trend-ranking" }, [
-      _c("div", { staticClass: "c-term" }, [
-        _c("div", { staticClass: "c-term__container" }, [
-          _vm._m(0),
-          _vm._v(" "),
-          _c("div", { staticClass: "c-term__select" }, [
-            _c(
-              "select",
-              {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.term,
-                    expression: "term"
-                  }
-                ],
-                staticClass: "c-selectbox__area",
-                on: {
-                  change: function($event) {
-                    var $$selectedVal = Array.prototype.filter
-                      .call($event.target.options, function(o) {
-                        return o.selected
-                      })
-                      .map(function(o) {
-                        var val = "_value" in o ? o._value : o.value
-                        return val
-                      })
-                    _vm.term = $event.target.multiple
-                      ? $$selectedVal
-                      : $$selectedVal[0]
-                  }
-                }
-              },
-              [
-                _c("option", { attrs: { value: "HOUR" } }, [
-                  _vm._v("過去１時間")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "DAY", selected: "" } }, [
-                  _vm._v("過去１日")
-                ]),
-                _vm._v(" "),
-                _c("option", { attrs: { value: "WEEK" } }, [
-                  _vm._v("過去１週間")
-                ])
-              ]
-            )
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "c-currency__container" }, [
-        _c("div", { staticClass: "c-time" }, [
-          _c("span", { staticClass: "c-time__label" }, [
-            _c("span", { staticClass: "u-font-size__12px" }, [_vm._v("(＊)")]),
-            _vm._v(
-              "\n                    " +
-                _vm._s(_vm.count_updated_at[_vm.term]) +
-                " 時点\n                "
-            )
+                },
+                [
+                  _c("option", { attrs: { value: "HOUR" } }, [
+                    _vm._v("過去１時間")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "DAY", selected: "" } }, [
+                    _vm._v("過去１日")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "WEEK" } }, [
+                    _vm._v("過去１週間")
+                  ])
+                ]
+              )
+            ])
           ])
         ]),
         _vm._v(" "),
-        _c("table", { staticClass: "c-currency-table" }, [
-          _vm._m(1),
+        _c("div", { staticClass: "c-currency__container" }, [
+          _c("div", { staticClass: "c-time" }, [
+            _c("span", { staticClass: "c-time__label" }, [
+              _c("span", { staticClass: "u-font-size--s" }, [_vm._v("(＊)")]),
+              _vm._v(
+                "\n                        " +
+                  _vm._s(_vm.count_updated_at[_vm.term]) +
+                  " 時点\n                    "
+              )
+            ])
+          ]),
           _vm._v(" "),
-          _c(
-            "tbody",
-            [
-              _vm._l(_vm.tweet_counts_json, function(tweet_count, key) {
-                return [
-                  tweet_count["suffix"] === _vm.term &&
-                  _vm.checkBtn[tweet_count["currency_code"]]
-                    ? [
-                        _c(
-                          "tr",
-                          { key: key, staticClass: "c-currency-table__row" },
-                          [
-                            _c(
-                              "td",
-                              {
-                                staticClass:
-                                  "c-currency-table__data u-text-center"
-                              },
-                              [
-                                _c(
-                                  "a",
-                                  {
-                                    attrs: {
-                                      href: "https://twitter.com/home",
-                                      target: "_blank"
-                                    }
-                                  },
-                                  [
-                                    _vm._v(
-                                      _vm._s(
-                                        _vm.currencyName[
-                                          tweet_count["currency_code"]
-                                        ]
+          _c("table", { staticClass: "c-currency-table" }, [
+            _vm._m(1),
+            _vm._v(" "),
+            _c(
+              "tbody",
+              [
+                _vm._l(_vm.tweet_counts_json, function(tweet_count, key) {
+                  return [
+                    tweet_count["suffix"] === _vm.term &&
+                    _vm.checkBtn[tweet_count["currency_code"]]
+                      ? [
+                          _c(
+                            "tr",
+                            { key: key, staticClass: "c-currency-table__row" },
+                            [
+                              _c(
+                                "td",
+                                {
+                                  staticClass:
+                                    "c-currency-table__data u-text-center"
+                                },
+                                [
+                                  _c(
+                                    "a",
+                                    {
+                                      attrs: {
+                                        href: "https://twitter.com/home",
+                                        target: "_blank"
+                                      }
+                                    },
+                                    [
+                                      _vm._v(
+                                        _vm._s(
+                                          _vm.currencyName[
+                                            tweet_count["currency_code"]
+                                          ]
+                                        )
                                       )
+                                    ]
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "td",
+                                {
+                                  staticClass:
+                                    "c-currency-table__data u-text-right"
+                                },
+                                [
+                                  _vm._v(
+                                    _vm._s(
+                                      Number(
+                                        tweet_count["count"]
+                                      ).toLocaleString()
+                                    )
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              tweet_count["currency_code"] === "BTC"
+                                ? [
+                                    _c(
+                                      "td",
+                                      {
+                                        staticClass:
+                                          "c-currency-table__data u-text-right"
+                                      },
+                                      [
+                                        _vm._v(
+                                          _vm._s(
+                                            Number(
+                                              _vm.ticker_response_json["high"]
+                                            ).toLocaleString()
+                                          )
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "td",
+                                      {
+                                        staticClass:
+                                          "c-currency-table__data u-text-right"
+                                      },
+                                      [
+                                        _vm._v(
+                                          _vm._s(
+                                            Number(
+                                              _vm.ticker_response_json["low"]
+                                            ).toLocaleString()
+                                          )
+                                        )
+                                      ]
                                     )
                                   ]
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "td",
-                              {
-                                staticClass:
-                                  "c-currency-table__data u-text-right"
-                              },
-                              [
-                                _vm._v(
-                                  _vm._s(
-                                    Number(
-                                      tweet_count["count"]
-                                    ).toLocaleString()
-                                  )
-                                )
-                              ]
-                            ),
-                            _vm._v(" "),
-                            tweet_count["currency_code"] === "BTC"
-                              ? [
-                                  _c(
-                                    "td",
-                                    {
-                                      staticClass:
-                                        "c-currency-table__data u-text-right"
-                                    },
-                                    [
-                                      _vm._v(
-                                        _vm._s(
-                                          Number(
-                                            _vm.ticker_response_json["high"]
-                                          ).toLocaleString()
-                                        )
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "td",
-                                    {
-                                      staticClass:
-                                        "c-currency-table__data u-text-right"
-                                    },
-                                    [
-                                      _vm._v(
-                                        _vm._s(
-                                          Number(
-                                            _vm.ticker_response_json["low"]
-                                          ).toLocaleString()
-                                        )
-                                      )
-                                    ]
-                                  )
-                                ]
-                              : [
-                                  _c(
-                                    "td",
-                                    {
-                                      staticClass:
-                                        "c-currency-table__data u-text-right"
-                                    },
-                                    [_vm._v("不明")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "td",
-                                    {
-                                      staticClass:
-                                        "c-currency-table__data u-text-right"
-                                    },
-                                    [_vm._v("不明")]
-                                  )
-                                ]
-                          ],
-                          2
-                        )
-                      ]
-                    : _vm._e()
-                ]
-              })
-            ],
-            2
-          )
+                                : [
+                                    _c(
+                                      "td",
+                                      {
+                                        staticClass:
+                                          "c-currency-table__data u-text-right"
+                                      },
+                                      [_vm._v("不明")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "td",
+                                      {
+                                        staticClass:
+                                          "c-currency-table__data u-text-right"
+                                      },
+                                      [_vm._v("不明")]
+                                    )
+                                  ]
+                            ],
+                            2
+                          )
+                        ]
+                      : _vm._e()
+                  ]
+                })
+              ],
+              2
+            )
+          ])
         ])
       ])
     ])
@@ -39118,26 +39027,22 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("thead", [
       _c("tr", { staticClass: "c-currency-table__header" }, [
-        _c("th", { staticClass: "c-currency-table__title u-width__192px" }, [
+        _c("th", { staticClass: "c-currency-table__title is-width-fix" }, [
           _vm._v("銘柄名")
         ]),
         _vm._v(" "),
         _c("th", { staticClass: "c-currency-table__title" }, [
           _vm._v("ツイート数"),
-          _c("span", { staticClass: "u-font-size__12px" }, [_vm._v("(＊)")])
+          _c("span", { staticClass: "u-font-size--s" }, [_vm._v("(＊)")])
         ]),
         _vm._v(" "),
         _c("th", { staticClass: "c-currency-table__title" }, [
-          _c("span", { staticClass: "u-font-size__12px" }, [
-            _vm._v("24時間での")
-          ]),
+          _c("span", { staticClass: "u-font-size--s" }, [_vm._v("24時間での")]),
           _vm._v("最高取引価格")
         ]),
         _vm._v(" "),
         _c("th", { staticClass: "c-currency-table__title" }, [
-          _c("span", { staticClass: "u-font-size__12px" }, [
-            _vm._v("24時間での")
-          ]),
+          _c("span", { staticClass: "u-font-size--s" }, [_vm._v("24時間での")]),
           _vm._v("最低取引価格")
         ])
       ])
@@ -51344,7 +51249,6 @@ Vue.component('index-component', __webpack_require__(/*! ./components/IndexCompo
 Vue.component('show-trend-component', __webpack_require__(/*! ./components/ShowTrendComponent.vue */ "./resources/js/components/ShowTrendComponent.vue")["default"]);
 Vue.component('account-list-component', __webpack_require__(/*! ./components/AccountListComponent.vue */ "./resources/js/components/AccountListComponent.vue")["default"]);
 Vue.component('news-list-component', __webpack_require__(/*! ./components/NewsListComponent.vue */ "./resources/js/components/NewsListComponent.vue")["default"]);
-Vue.component('register-twitter-account-component', __webpack_require__(/*! ./components/RegisterTwitterAccountComponent.vue */ "./resources/js/components/RegisterTwitterAccountComponent.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -51353,7 +51257,7 @@ Vue.component('register-twitter-account-component', __webpack_require__(/*! ./co
 
 var app = new Vue({
   el: '#app'
-}); // import "./main";
+});
 
 /***/ }),
 
@@ -51678,75 +51582,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/RegisterTwitterAccountComponent.vue":
-/*!*********************************************************************!*\
-  !*** ./resources/js/components/RegisterTwitterAccountComponent.vue ***!
-  \*********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _RegisterTwitterAccountComponent_vue_vue_type_template_id_adef5bb6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RegisterTwitterAccountComponent.vue?vue&type=template&id=adef5bb6& */ "./resources/js/components/RegisterTwitterAccountComponent.vue?vue&type=template&id=adef5bb6&");
-/* harmony import */ var _RegisterTwitterAccountComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RegisterTwitterAccountComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/RegisterTwitterAccountComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _RegisterTwitterAccountComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _RegisterTwitterAccountComponent_vue_vue_type_template_id_adef5bb6___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _RegisterTwitterAccountComponent_vue_vue_type_template_id_adef5bb6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/RegisterTwitterAccountComponent.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/RegisterTwitterAccountComponent.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************!*\
-  !*** ./resources/js/components/RegisterTwitterAccountComponent.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RegisterTwitterAccountComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./RegisterTwitterAccountComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RegisterTwitterAccountComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_RegisterTwitterAccountComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/RegisterTwitterAccountComponent.vue?vue&type=template&id=adef5bb6&":
-/*!****************************************************************************************************!*\
-  !*** ./resources/js/components/RegisterTwitterAccountComponent.vue?vue&type=template&id=adef5bb6& ***!
-  \****************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RegisterTwitterAccountComponent_vue_vue_type_template_id_adef5bb6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./RegisterTwitterAccountComponent.vue?vue&type=template&id=adef5bb6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/RegisterTwitterAccountComponent.vue?vue&type=template&id=adef5bb6&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RegisterTwitterAccountComponent_vue_vue_type_template_id_adef5bb6___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_RegisterTwitterAccountComponent_vue_vue_type_template_id_adef5bb6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
 /***/ "./resources/js/components/ShowTrendComponent.vue":
 /*!********************************************************!*\
   !*** ./resources/js/components/ShowTrendComponent.vue ***!
@@ -51838,7 +51673,22 @@ __webpack_require__.r(__webpack_exports__);
     $ftr.attr({
       'style': 'position:fixed; top:' + (window.innerHeight - $ftr.outerHeight()) + 'px;'
     });
-  }
+  } // フロートヘッダーメニュー
+
+
+  var targetHeight = $('.js-float-menu-target').height();
+  $(window).on('scroll', function () {
+    $('.js-float-menu').toggleClass('float-active', $(this).scrollTop() > targetHeight);
+  }); // SPメニュー
+
+  $('.js-toggle-sp-menu').on('click', function () {
+    $(this).toggleClass('is-active');
+    $('.js-toggle-sp-menu-target').toggleClass('is-active');
+  });
+  $('.js-sp-menu-item').on('click', function () {
+    $('.js-toggle-sp-menu').toggleClass('is-active');
+    $('.js-toggle-sp-menu-target').toggleClass('is-active');
+  });
 })();
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 

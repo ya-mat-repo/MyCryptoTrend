@@ -1,0 +1,89 @@
+.c-news__container {
+  width: $site-width;
+  margin-top: $space_l;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq() {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+}
+
+.c-news__header {
+  display: flex;
+  justify-content: stretch;
+  border-bottom: solid 3px #777;
+  
+  @include mq() {
+    display: block;
+  }
+}
+
+.c-news__label {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  font-size: $font-size_l;
+  margin-bottom: $space_s;
+  width: $site-width;
+
+  @include mq() {
+    width: 100%;
+  }
+}
+.c-news__item {
+  margin-left: $space_m;
+  
+  @include mq() {
+    margin-left: $space_s;
+  }
+
+  &--title {
+    overflow-x: auto;
+    line-height: 24px;
+    font-size: $font-size_default;
+    color: #555;
+    transition: .2s;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: dotted 1px #36366e;
+    resize: none;
+    white-space: pre;
+      
+    @include mq() {
+      font-size: $font-size_m;
+      width: calc(100% - 4px);
+    }
+      
+    &:hover {
+      cursor: pointer;
+      color: #1326cc;
+      transition: .2s;
+    }
+  }
+  &--pubdate {
+      font-size: $font-size_s;
+  }
+}
+.c-news-page {
+  position: relative;
+  width: 350px;
+
+  @include mq() {
+    width: calc(100% - 15px);
+    margin-left: 15px;
+  }
+
+  &__label {
+      display: inline-block;
+  }
+  &__button {
+      height: 32px;
+
+      @include mq() {
+        height: 28px;
+      }
+  }
+}

@@ -1,0 +1,80 @@
+.u-margin-top--100 {
+  margin-top: 100px;
+}
+
+.u-btn__login {
+    background-color: #f6f5f4;
+    border-style: none;
+    font-size: $font-size_m;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 234px;
+    transition: .2s;
+    width: 80px;
+
+    @include mq() {
+      margin-left: initial;
+    }
+
+    &:hover {
+    background-color: #b3b2b2;
+    cursor: pointer;
+    transition: .2s;
+    }
+}
+
+.u-btn__submit {
+    height: 30px;
+    background-color: #1193bb;
+    color: #f6f5f4;
+    border-style: none;
+    transition: .2s;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #0b5970;
+        transition: .2s;
+    }
+}
+
+.u-invalid--error {
+    color: red;
+    display: block;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 32px;
+    width: 500px;
+    
+    @include mq() {
+      font-size: 14px;
+      text-align: center;
+      top: 25px;
+      width: 100%;
+    }
+
+    &.is-register {
+      position: absolute;
+      text-align: center;
+      top: -40px;
+      
+      @include mq() {
+        left: 0;
+        top: -20px;
+        width: 100%;
+      }
+    }
+}
+
+.u-font-size--s {
+  font-size: $font-size_s;
+}
+
+.u-sp-break {
+  display: none;
+
+  @include mq() {
+    display: block;
+  }
+}

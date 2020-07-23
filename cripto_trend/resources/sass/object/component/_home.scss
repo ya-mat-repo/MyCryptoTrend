@@ -1,0 +1,255 @@
+.c-background__container {
+  background-image: url('../../../../public/img/wall-tile_l.jpg');
+  background-blend-mode: lighten;
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 830px;
+  
+  @include mq() {
+    height: 100%;
+    background-image: none;
+    margin-bottom: 60px;
+  }
+}
+
+.c-home__container {
+  position: relative;
+  width: $site-width;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  top: 100px;
+  
+  @include mq() {
+    top: $space_m;
+    width: 100%;
+  }
+}
+
+.c-checkbox__area {
+  position: relative;
+  width: 30%;
+  background-color: rgba(244,244,244, 0.7);
+  float: left;
+  min-height: 500px;
+
+  @include mq() {
+    min-height: 100vh;
+  }
+}
+
+.c-select-currency {
+  margin-top: $space_l;
+  margin-left: $space_l;
+  
+  @include mq() {
+    font-size: $font-size_m;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  &__title {
+    display: block;
+    font-size: $font-size_l;
+    line-height: $font-size_l;
+    margin-bottom: $space_xl;
+    background-color: #efe8d6;
+    width: 33%;
+    padding: 2px 5px;
+    border-radius: 2px;
+
+    @include mq() {
+      background-color: #dae6f3;
+      font-size: $font-size_m;
+      line-height: 28px;
+      margin-bottom: 5px;
+      text-align: center;
+      width: calc(100% - 10px);
+    }
+  }
+}
+
+.c-trend-ranking {
+  position: relative;
+  width: 70%;
+  float: left;
+  min-height: 500px;
+  background-color: rgba(199, 209, 228, 0.3);
+
+  @include mq() {
+    // background-color: rgba(244,244,244, 0.7);
+    background-color: initial;
+    height: 100vh;
+  }
+}
+
+
+.c-checkbox__container {
+  display: block;
+  line-height: 30px;
+
+}
+.c-checkbox__item {
+  font-size: $font-size_default;
+}
+
+.c-checkbox__label {
+  position: relative;
+  // top: 2px;
+}
+
+
+.c-term {
+
+
+  &__container {
+    margin-top: $space_l;
+    margin-left: $space_l;
+    display: flex;
+    justify-content: left;
+    font-size: $font-size_l;
+    line-height: $font-size_l;
+
+    @include mq() {
+      margin-top: 7px;
+    }
+  }
+
+  &__title {
+    @include mq() {
+      font-size: $font-size_m;
+    }
+  }
+
+  &__select {
+    margin-left: $space_m;
+
+    @include mq() {
+      margin-left: $space_m;
+      width: 70%;
+    }
+  }
+}
+
+.c-selectbox__area {
+  position: relative;
+  width: 200px;
+  height: 28px;
+  top: -5px;
+  font-size: $font-size_default;
+  line-height: $font-size_default;
+
+  @include mq() {
+    font-size: 14px;
+    width: 100%;
+  }
+}
+
+.c-time {
+  position: absolute;
+  top: 45px;
+  right: 10px;
+
+  @include mq() {
+    top: 38px;
+  }
+
+  &__label {
+    font-size: $font-size_m;
+  }
+}
+
+.c-currency-table {
+  width: 98%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq() {
+    width: 100%;
+    font-size: $font-size_m;
+  }
+  
+  &__header {
+    background-color: #f6f5f4;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+
+    }
+  
+  &__title {
+    border: 1px solid;
+
+
+    &.is-width-fix {
+      width: 192px;
+
+      @include mq() {
+        width: 90px;
+      }
+    }
+  }
+
+  &__row {
+    background-color: #fff;
+    height: 28px;
+    line-height: 28px;
+  }
+
+  &__data {
+    border: 1px solid;
+    
+    &.u-text-center {
+      text-align: center;
+    }
+    
+    &.u-text-right {
+      text-align: right;
+      padding-right: $space_m;
+
+      @include mq() {
+        padding-right: 2px;
+      }
+    }
+  }
+}
+
+.c-button__select {
+    padding: $space_s;
+    font-size: $font-size_m;
+    border-style: none;
+    cursor: pointer;
+    margin-left: 4px;
+    margin-bottom: $space_s;
+
+    @include mq() {
+      margin-left: $space_s;
+    }
+    
+    &.is-all {
+        background-color: #5555aa;
+        color: #f6f5f4;
+        transition: .2s;
+
+        
+        &:hover {
+            background-color: #36366e;
+            transition: .2s;
+        }
+    }
+    &.is-cancel {
+        margin-left: $space_m;
+        background-color: #a18b28;
+        color: #f6f5f4;
+        transition: .2s;
+
+        @include mq() {
+          margin-left: $space_s;
+        }
+        
+        &:hover {
+            background-color: #584c15;
+            transition: .2s;
+        }
+    }
+}

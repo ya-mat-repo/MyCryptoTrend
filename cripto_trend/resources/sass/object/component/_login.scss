@@ -1,0 +1,145 @@
+.c-login__title {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+  font-size: $font-size_xxl;
+  text-align: center;
+  margin-bottom: $space_xl;
+  font-family: 'Noto Sans JP', sans-serif;
+
+  @include mq() {
+    font-size: 20px;
+  }
+}
+
+.c-login__container {
+  position: relative;
+  width: $site-width;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(3, 3, 3, 0.6);
+  border-radius: 3px;
+  top: 140px;
+  color: $color-base;
+
+  @include mq() {
+    height: 100vh;
+    width: 100%;
+    top: 80px;
+  }
+}
+
+.c-item__container {
+  position: relative;
+  width: 100%;
+  top: 75px;
+
+  @include mq() {
+    top: 30px;
+  }
+}
+
+.c-input__container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: $space_3l;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include mq() {
+    display: block;
+  }
+}
+
+.c-login__label {
+  width: 150px;
+
+  @include mq() {
+    font-size: 14px;
+  }
+}
+
+.c-login__input {
+  width: 380px;
+  height: 40px;
+  font-size: $font-size_l;
+
+  @include mq() {
+    height: 30px;
+    width: 100%;
+  }
+}
+
+.c-remember {
+  position: relative;
+  width: 70%;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include mq() {
+    justify-content: initial;
+  }
+
+  &__checkbox {
+    transform: scale(1.2);
+  }
+
+  &__label {
+    height: 16px;
+    line-height: 18px;
+    margin-left: $space_s;
+    width: 200px;
+
+    @include mq() {
+      font-size: 14px;
+    }
+  }
+}
+
+.c-submit {
+  position: relative;
+  width: 72%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 2px;
+
+  @include mq() {
+    left: 5px;
+  }
+}
+
+.c-background__login {
+  background-image: url(../../public/img/hero2.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 840px;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-blend-mode: lighten;
+  z-index: 1;
+
+  @include mq() {
+    height: initial;
+    width: 100%;
+  }
+}
+
+.c-label__forgot {
+  color: #efda9a;
+  font-size: $font-size_m;
+  margin-left: $space_s;
+
+  @include mq() {
+    display: block;
+    margin-top: 15px;
+  }
+}

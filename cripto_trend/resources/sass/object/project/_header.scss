@@ -1,0 +1,10 @@
+.p-header__title {
+  margin-left: $space_m;
+  font-size: $font-size_xl;
+  font-family: 'Prompt', sans-serif;
+  
+  @include mq() {
+    font-size: $font-size_l;
+    margin-left: $space_s;
+  }
+}

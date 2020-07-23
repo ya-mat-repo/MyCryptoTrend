@@ -1,0 +1,54 @@
+.c-remainder {
+  position: relative;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+
+  &__input {
+      font-size: $font-size_default;
+      height: 30px;
+      width: 300px;
+  }
+
+  &__submit {
+      position: relative;
+      width: 229px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: $space_m;
+  }
+}
+
+.c-remainder__container {
+  position: relative;
+  width: 580px;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  display: flex;
+  background-color: #eef6f7;
+
+  @include mq() {
+    width: 100%;
+  }
+}
+
+.c-remainder__form {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.c-remainder__title {
+  color: #616265;
+  font-size: $font-size_default;
+  margin-left: 15px;
+  position: relative;
+  width: 145px;
+  background-color: #8eefc6;
+  padding: 5px 5px;
+  border-radius: 10px;
+  text-align: center;
+}

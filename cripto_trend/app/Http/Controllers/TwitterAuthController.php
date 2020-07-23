@@ -12,6 +12,15 @@ use Illuminate\Support\Facades\Log;
 
 class TwitterAuthController extends Controller
 {
+    /*
+    |--------------------------------------------------------------------------
+    | ツイッターアカウント認証用のコントローラー
+    |--------------------------------------------------------------------------
+    */
+
+    /**
+     * ツイッター認証ページを表示する
+     */
     public function twitterAuth()
     {
         $email = Auth::user()->email;
@@ -19,6 +28,9 @@ class TwitterAuthController extends Controller
         return view('twitter_auth', compact('is_twitter_auth'));
     }
     
+    /**
+     * リクエストトークンを取得する
+     */
     public function getRequestToken()
     {
         // =============================
@@ -101,20 +113,15 @@ class TwitterAuthController extends Controller
         // 取得したデータ
         $response = substr($res1, $res2["header_size"]); // 取得したデータ（jsonなど）
         $header = substr($res1, 0, $res2["header_size"]); // レスポンスヘッダー（検証用）
-        // [cURL]ではなく、[file_get_contents()]を使うには下記の通りです…
+
+        // [cURL]ではなく、[file_get_contents()]を使うには下記の通り
         // $response = file_get_contents( $request_url , false , stream_context_create( $context ) ) ;
+
         // リクエストトークンを取得できなかった場合
         if (!$response) {
             Log::debug('リクエストトークンを取得できませんでした…。$api_keyと$callback_url、そしてTwitterのアプリケーションに設定しているCallback URLを確認して下さい。');
             exit;
         }
-        // Log::debug('>>>>> getRequestToken $res1 = ' . print_r($res1, true));
-        // Log::debug('>>>>> getRequestToken $res2 = ' . print_r($res2, true));
-        // Log::debug('>>>>> getRequestToken $response = ' . print_r($response, true));
-        // if ($response == 1) {
-        //     Log::debug('>>>>> $responseの値が1です。遷移元に遷移します。');
-        //     return view('twitter_auth');
-        // }
         // $responseの内容(文字列)を$query(配列)に直す
         // aaa=AAA&bbb=BBB → [ "aaa"=>"AAA", "bbb"=>"BBB" ]
         $query = [];
@@ -130,15 +137,15 @@ class TwitterAuthController extends Controller
         $_SESSION['request_token'] = $request_token;
         $_SESSION['request_token_secret'] = $request_token_secret;
     
-        // ユーザーを認証画面へ飛ばす (毎回ボタンを押す場合)
-        // header("Location: https://api.twitter.com/oauth/authorize?oauth_token=".$query["oauth_token"]);
-
-        // ユーザーを認証画面へ飛ばす (二回目以降は認証画面をスキップする場合)
+        // ユーザーを認証画面へ飛ばす
         Log::debug('>>>>> 認証画面へ遷移します。');
         $url = "https://api.twitter.com/oauth/authenticate?oauth_token=" . $request_token;
         return redirect($url);
     }
-            
+
+    /**
+     * アクセストークンを取得する
+     */
     public function getAccessToken()
     {
         // ========================
@@ -251,11 +258,7 @@ class TwitterAuthController extends Controller
                     // 'access_token_secret' => encrypt($access_token_secret),
                 ]);
                 $flash_message = 'Twitterアカウントの認証に成功しました。';
-            } else {
-                // 既に認証完了している場合はview側でブロックしているのでこの分岐は必要ないはず。。。
-                $flash_message = '既にTwitterアカウントの認証が完了しています。';
             }
-            
         } elseif (isset($_GET["denied"])) {
             // エラーメッセージを出力して終了
             Log::debug('>>>>> 連携を拒否しました。');
@@ -264,42 +267,5 @@ class TwitterAuthController extends Controller
 
         $is_twitter_auth = (empty($twitterAuth)) ? false : true;
         return view('twitter_auth', compact('is_twitter_auth'))->with(compact('flash_message'));
-    }
-
-    // これは多分使わないので後で削除
-    public function registrationTwitterAccount() {
-        $type_name = '';
-        $twitter_id = \Auth::user()->twitter_id;
-        if (empty($twitter_id)) {
-            $type_name = '登録';
-        } else {
-            $type_name = '更新';
-        }
-        return view('registration_tw', compact('type_name'));
-    }
-    
-    public function registerTwitter(Request $request) {
-        // if (Request::has('twitterAccount')) {
-        //     Log::debug('>>> twitterAccount = ' . $_REQUEST->twitterAccount);
-        // }
-        
-        Log::debug('>>> twitterAccount = ' . $request->twitterAccount);
-        // Log::debug('>>> Auth()::user()->twitter_id = ' . print_r(\Auth::user()->twitter_id, true));
-        // Log::debug('>>> Auth()::user()->email= ' . print_r(\Auth::user()->email, true));
-        $type_name = '';
-        $twitter_id = $request->twitterAccount;
-        if (empty($twitter_id)) {
-            $type_name = '登録';
-        } else {
-            $type_name = '更新';
-        }
-        $saved_twitter_id = \Auth::user()->twitter_id;
-        User::where('id', \Auth::user()->id)->update(['twitter_id' => $twitter_id]);
-        // if (empty($saved_twitter_id)) {
-        //     Log::debug('$saved_twitter_idは空でっす！');
-        // } else {
-        //     Log::debug('$saved_twitter_idは空じゃないっす！');
-        // }
-        return view('registration_tw', compact('type_name'));
     }
 }

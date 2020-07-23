@@ -28,6 +28,4 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/get_request_token', 'TwitterAuthController@getRequestToken')->name('get_request_token');
     Route::get('/get_access_token', 'TwitterAuthController@getAccessToken')->name('get_access_token');
     Route::get('/news', 'NewsController@news')->name('news');
-    Route::get('/registration_tw', 'TwitterAuthController@registrationTwitterAccount')->name('registration_tw');
-    Route::post('/registration_tw', 'TwitterAuthController@registerTwitter')->name('twitter_register');
 });
