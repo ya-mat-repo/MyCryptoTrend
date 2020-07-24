@@ -395,7 +395,7 @@ a:hover {
 @media screen and (max-width: 414px) {
   .c-nav-menu {
     display: block;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: -100%;
     background: rgba(255, 255, 255, 0.85);
