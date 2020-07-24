@@ -1,6 +1,6 @@
 <header class="l-header js-float-menu">
     {{-- <h1 class="p-header__title"><a href="/">Crypto <br class="u-sp-break">Trend</a></h1> --}}
-    <h1 class="p-header__title"><a href="/">Crypto Trend</a></h1>
+    <h1 class="p-header__title"><a href=" {{ url("/")}} ">Crypto Trend</a></h1>
 
     <!--   ハンバーガーメニューになる部分   -->
     <div class="c-menu__trigger js-toggle-sp-menu">

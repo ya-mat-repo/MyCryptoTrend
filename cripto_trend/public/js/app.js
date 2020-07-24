@@ -38729,288 +38729,298 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "c-background__container" }, [
-    _c("div", { staticClass: "c-home__container" }, [
-      _c("div", { staticClass: "c-checkbox__area" }, [
-        _c(
-          "div",
-          { staticClass: "c-select-currency" },
-          [
-            _c("h2", { staticClass: "c-select-currency__title" }, [
-              _vm._v("通貨を選択")
-            ]),
-            _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "c-button__select is-all",
-                on: { click: _vm.selectAll }
-              },
-              [_vm._v("全て選択")]
-            ),
-            _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "c-button__select is-cancel",
-                on: { click: _vm.cancelAll }
-              },
-              [_vm._v("全て解除")]
-            ),
-            _vm._v(" "),
-            _vm._l(_vm.currencyName, function(value, key) {
-              return _c(
-                "div",
-                { key: key, staticClass: "c-checkbox__container" },
-                [
-                  _c("input", {
+  return _c(
+    "div",
+    {
+      staticClass: "c-background__container",
+      staticStyle: { "background-image": "url('img/wall-tile_l.jpg')" }
+    },
+    [
+      _c("div", { staticClass: "c-home__container" }, [
+        _c("div", { staticClass: "c-checkbox__area" }, [
+          _c(
+            "div",
+            { staticClass: "c-select-currency" },
+            [
+              _c("h2", { staticClass: "c-select-currency__title" }, [
+                _vm._v("通貨を選択")
+              ]),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "c-button__select is-all",
+                  on: { click: _vm.selectAll }
+                },
+                [_vm._v("全て選択")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "c-button__select is-cancel",
+                  on: { click: _vm.cancelAll }
+                },
+                [_vm._v("全て解除")]
+              ),
+              _vm._v(" "),
+              _vm._l(_vm.currencyName, function(value, key) {
+                return _c(
+                  "div",
+                  { key: key, staticClass: "c-checkbox__container" },
+                  [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.checkBtn[key],
+                          expression: "checkBtn[key]"
+                        }
+                      ],
+                      staticClass: "c-checkbox__item",
+                      attrs: { type: "checkbox", value: "key" },
+                      domProps: {
+                        checked: Array.isArray(_vm.checkBtn[key])
+                          ? _vm._i(_vm.checkBtn[key], "key") > -1
+                          : _vm.checkBtn[key]
+                      },
+                      on: {
+                        change: function($event) {
+                          var $$a = _vm.checkBtn[key],
+                            $$el = $event.target,
+                            $$c = $$el.checked ? true : false
+                          if (Array.isArray($$a)) {
+                            var $$v = "key",
+                              $$i = _vm._i($$a, $$v)
+                            if ($$el.checked) {
+                              $$i < 0 &&
+                                _vm.$set(_vm.checkBtn, key, $$a.concat([$$v]))
+                            } else {
+                              $$i > -1 &&
+                                _vm.$set(
+                                  _vm.checkBtn,
+                                  key,
+                                  $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                                )
+                            }
+                          } else {
+                            _vm.$set(_vm.checkBtn, key, $$c)
+                          }
+                        }
+                      }
+                    }),
+                    _c("span", { staticClass: "c-checkbox__label" }, [
+                      _vm._v(_vm._s(value)),
+                      _c("br", { staticClass: "u-sp-break" }),
+                      _vm._v("(" + _vm._s(key) + ")")
+                    ])
+                  ]
+                )
+              })
+            ],
+            2
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "c-trend-ranking" }, [
+          _c("div", { staticClass: "c-term" }, [
+            _c("div", { staticClass: "c-term__container" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("div", { staticClass: "c-term__select" }, [
+                _c(
+                  "select",
+                  {
                     directives: [
                       {
                         name: "model",
                         rawName: "v-model",
-                        value: _vm.checkBtn[key],
-                        expression: "checkBtn[key]"
+                        value: _vm.term,
+                        expression: "term"
                       }
                     ],
-                    staticClass: "c-checkbox__item",
-                    attrs: { type: "checkbox", value: "key" },
-                    domProps: {
-                      checked: Array.isArray(_vm.checkBtn[key])
-                        ? _vm._i(_vm.checkBtn[key], "key") > -1
-                        : _vm.checkBtn[key]
-                    },
+                    staticClass: "c-selectbox__area",
                     on: {
                       change: function($event) {
-                        var $$a = _vm.checkBtn[key],
-                          $$el = $event.target,
-                          $$c = $$el.checked ? true : false
-                        if (Array.isArray($$a)) {
-                          var $$v = "key",
-                            $$i = _vm._i($$a, $$v)
-                          if ($$el.checked) {
-                            $$i < 0 &&
-                              _vm.$set(_vm.checkBtn, key, $$a.concat([$$v]))
-                          } else {
-                            $$i > -1 &&
-                              _vm.$set(
-                                _vm.checkBtn,
-                                key,
-                                $$a.slice(0, $$i).concat($$a.slice($$i + 1))
-                              )
-                          }
-                        } else {
-                          _vm.$set(_vm.checkBtn, key, $$c)
-                        }
+                        var $$selectedVal = Array.prototype.filter
+                          .call($event.target.options, function(o) {
+                            return o.selected
+                          })
+                          .map(function(o) {
+                            var val = "_value" in o ? o._value : o.value
+                            return val
+                          })
+                        _vm.term = $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
                       }
                     }
-                  }),
-                  _c("span", { staticClass: "c-checkbox__label" }, [
-                    _vm._v(_vm._s(value)),
-                    _c("br", { staticClass: "u-sp-break" }),
-                    _vm._v("(" + _vm._s(key) + ")")
-                  ])
-                ]
-              )
-            })
-          ],
-          2
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "c-trend-ranking" }, [
-        _c("div", { staticClass: "c-term" }, [
-          _c("div", { staticClass: "c-term__container" }, [
-            _vm._m(0),
-            _vm._v(" "),
-            _c("div", { staticClass: "c-term__select" }, [
-              _c(
-                "select",
-                {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.term,
-                      expression: "term"
-                    }
-                  ],
-                  staticClass: "c-selectbox__area",
-                  on: {
-                    change: function($event) {
-                      var $$selectedVal = Array.prototype.filter
-                        .call($event.target.options, function(o) {
-                          return o.selected
-                        })
-                        .map(function(o) {
-                          var val = "_value" in o ? o._value : o.value
-                          return val
-                        })
-                      _vm.term = $event.target.multiple
-                        ? $$selectedVal
-                        : $$selectedVal[0]
-                    }
-                  }
-                },
-                [
-                  _c("option", { attrs: { value: "HOUR" } }, [
-                    _vm._v("過去１時間")
-                  ]),
-                  _vm._v(" "),
-                  _c("option", { attrs: { value: "DAY", selected: "" } }, [
-                    _vm._v("過去１日")
-                  ]),
-                  _vm._v(" "),
-                  _c("option", { attrs: { value: "WEEK" } }, [
-                    _vm._v("過去１週間")
-                  ])
-                ]
-              )
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "c-currency__container" }, [
-          _c("div", { staticClass: "c-time" }, [
-            _c("span", { staticClass: "c-time__label" }, [
-              _c("span", { staticClass: "u-font-size--s" }, [_vm._v("(＊)")]),
-              _vm._v(
-                "\n                        " +
-                  _vm._s(_vm.count_updated_at[_vm.term]) +
-                  " 時点\n                    "
-              )
+                  },
+                  [
+                    _c("option", { attrs: { value: "HOUR" } }, [
+                      _vm._v("過去１時間")
+                    ]),
+                    _vm._v(" "),
+                    _c("option", { attrs: { value: "DAY", selected: "" } }, [
+                      _vm._v("過去１日")
+                    ]),
+                    _vm._v(" "),
+                    _c("option", { attrs: { value: "WEEK" } }, [
+                      _vm._v("過去１週間")
+                    ])
+                  ]
+                )
+              ])
             ])
           ]),
           _vm._v(" "),
-          _c("table", { staticClass: "c-currency-table" }, [
-            _vm._m(1),
+          _c("div", { staticClass: "c-currency__container" }, [
+            _c("div", { staticClass: "c-time" }, [
+              _c("span", { staticClass: "c-time__label" }, [
+                _c("span", { staticClass: "u-font-size--s" }, [_vm._v("(＊)")]),
+                _vm._v(
+                  "\n                        " +
+                    _vm._s(_vm.count_updated_at[_vm.term]) +
+                    " 時点\n                    "
+                )
+              ])
+            ]),
             _vm._v(" "),
-            _c(
-              "tbody",
-              [
-                _vm._l(_vm.tweet_counts_json, function(tweet_count, key) {
-                  return [
-                    tweet_count["suffix"] === _vm.term &&
-                    _vm.checkBtn[tweet_count["currency_code"]]
-                      ? [
-                          _c(
-                            "tr",
-                            { key: key, staticClass: "c-currency-table__row" },
-                            [
-                              _c(
-                                "td",
-                                {
-                                  staticClass:
-                                    "c-currency-table__data u-text-center"
-                                },
-                                [
-                                  _c(
-                                    "a",
-                                    {
-                                      attrs: {
-                                        href: "https://twitter.com/home",
-                                        target: "_blank"
-                                      }
-                                    },
-                                    [
-                                      _vm._v(
-                                        _vm._s(
-                                          _vm.currencyName[
-                                            tweet_count["currency_code"]
-                                          ]
+            _c("table", { staticClass: "c-currency-table" }, [
+              _vm._m(1),
+              _vm._v(" "),
+              _c(
+                "tbody",
+                [
+                  _vm._l(_vm.tweet_counts_json, function(tweet_count, key) {
+                    return [
+                      tweet_count["suffix"] === _vm.term &&
+                      _vm.checkBtn[tweet_count["currency_code"]]
+                        ? [
+                            _c(
+                              "tr",
+                              {
+                                key: key,
+                                staticClass: "c-currency-table__row"
+                              },
+                              [
+                                _c(
+                                  "td",
+                                  {
+                                    staticClass:
+                                      "c-currency-table__data u-text-center"
+                                  },
+                                  [
+                                    _c(
+                                      "a",
+                                      {
+                                        attrs: {
+                                          href: "https://twitter.com/home",
+                                          target: "_blank"
+                                        }
+                                      },
+                                      [
+                                        _vm._v(
+                                          _vm._s(
+                                            _vm.currencyName[
+                                              tweet_count["currency_code"]
+                                            ]
+                                          )
                                         )
+                                      ]
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "td",
+                                  {
+                                    staticClass:
+                                      "c-currency-table__data u-text-right"
+                                  },
+                                  [
+                                    _vm._v(
+                                      _vm._s(
+                                        Number(
+                                          tweet_count["count"]
+                                        ).toLocaleString()
+                                      )
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                tweet_count["currency_code"] === "BTC"
+                                  ? [
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass:
+                                            "c-currency-table__data u-text-right"
+                                        },
+                                        [
+                                          _vm._v(
+                                            _vm._s(
+                                              Number(
+                                                _vm.ticker_response_json["high"]
+                                              ).toLocaleString()
+                                            )
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass:
+                                            "c-currency-table__data u-text-right"
+                                        },
+                                        [
+                                          _vm._v(
+                                            _vm._s(
+                                              Number(
+                                                _vm.ticker_response_json["low"]
+                                              ).toLocaleString()
+                                            )
+                                          )
+                                        ]
                                       )
                                     ]
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "td",
-                                {
-                                  staticClass:
-                                    "c-currency-table__data u-text-right"
-                                },
-                                [
-                                  _vm._v(
-                                    _vm._s(
-                                      Number(
-                                        tweet_count["count"]
-                                      ).toLocaleString()
-                                    )
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              tweet_count["currency_code"] === "BTC"
-                                ? [
-                                    _c(
-                                      "td",
-                                      {
-                                        staticClass:
-                                          "c-currency-table__data u-text-right"
-                                      },
-                                      [
-                                        _vm._v(
-                                          _vm._s(
-                                            Number(
-                                              _vm.ticker_response_json["high"]
-                                            ).toLocaleString()
-                                          )
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "td",
-                                      {
-                                        staticClass:
-                                          "c-currency-table__data u-text-right"
-                                      },
-                                      [
-                                        _vm._v(
-                                          _vm._s(
-                                            Number(
-                                              _vm.ticker_response_json["low"]
-                                            ).toLocaleString()
-                                          )
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                : [
-                                    _c(
-                                      "td",
-                                      {
-                                        staticClass:
-                                          "c-currency-table__data u-text-right"
-                                      },
-                                      [_vm._v("不明")]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "td",
-                                      {
-                                        staticClass:
-                                          "c-currency-table__data u-text-right"
-                                      },
-                                      [_vm._v("不明")]
-                                    )
-                                  ]
-                            ],
-                            2
-                          )
-                        ]
-                      : _vm._e()
-                  ]
-                })
-              ],
-              2
-            )
+                                  : [
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass:
+                                            "c-currency-table__data u-text-right"
+                                        },
+                                        [_vm._v("不明")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        {
+                                          staticClass:
+                                            "c-currency-table__data u-text-right"
+                                        },
+                                        [_vm._v("不明")]
+                                      )
+                                    ]
+                              ],
+                              2
+                            )
+                          ]
+                        : _vm._e()
+                    ]
+                  })
+                ],
+                2
+              )
+            ])
           ])
         ])
       ])
-    ])
-  ])
+    ]
+  )
 }
 var staticRenderFns = [
   function() {

@@ -1,5 +1,5 @@
 <template>
-    <div class="c-background__container">
+    <div class="c-background__container" style="background-image: url('img/wall-tile_l.jpg') ;">
         <div class="c-home__container">
             <div class="c-checkbox__area">
                 <div class="c-select-currency">
