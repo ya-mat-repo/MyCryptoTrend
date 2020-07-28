@@ -38,7 +38,8 @@ class TwitterAuthController extends Controller
         // =============================
         $api_key = 'u8GXSucbr7JvGzWb2TonppQgL';
         $api_secret = 'rYVAprz5SDwEUoIDL1bLlOphVCs9gnptdWPadzBR7KbSrIbX31';
-        $callback_url = 'http://localhost:8000/get_access_token';
+        // $callback_url = 'http://localhost:8000/get_access_token';
+        $callback_url = env('APP_URL') . '/get_access_token';
         
         // [アクセストークンシークレット] (まだ存在しないので空文字を設定)
         $access_token_secret = '';

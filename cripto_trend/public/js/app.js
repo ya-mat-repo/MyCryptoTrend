@@ -1982,10 +1982,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['candidates_json', 'is_twitter_auth', 'is_auto_follow'],
   data: function data() {

@@ -17,26 +17,31 @@
       margin-left: auto;
       margin-right: auto;
       margin-top: $space_m;
+
+      @include mq() {
+        margin-left: initial;
+        left: 39px;
+      }
   }
 }
 
 .c-remainder__container {
-  position: relative;
-  width: 580px;
+  display: flex;
   height: 250px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 60px;
-  display: flex;
-  background-color: #eef6f7;
-
+  padding-top: 200px;
+  position: relative;
+  width: 580px;
+  
   @include mq() {
+    padding-top: 100px;
     width: 100%;
   }
 }
 
 .c-remainder__form {
-  margin-top: 10px;
+  background-color: #eef6f7;
   margin-bottom: 10px;
   width: 100%;
 }
@@ -45,6 +50,7 @@
   color: #616265;
   font-size: $font-size_default;
   margin-left: 15px;
+  margin-top: $space_m;
   position: relative;
   width: 145px;
   background-color: #8eefc6;

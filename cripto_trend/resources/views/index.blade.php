@@ -77,7 +77,7 @@
                     </div>
                     </div>
                 </section>
-                <div class="c-register__btn"><a href="/register">今すぐ無料で登録！</a></div>
+                <div class="c-register__btn"><a href="{{ url("/register") }}">今すぐ無料で登録！</a></div>
                 
                     {{-- <index-component></index-component> --}}
             </main>

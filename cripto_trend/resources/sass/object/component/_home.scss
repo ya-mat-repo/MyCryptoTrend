@@ -3,6 +3,7 @@
   background-blend-mode: lighten;
   background-color: rgba(255, 255, 255, 0.3);
   height: 830px;
+  padding-top: 60px;
   
   @include mq() {
     height: 100%;

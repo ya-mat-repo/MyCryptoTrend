@@ -167,15 +167,10 @@ a:hover {
   display: flex;
   height: 60px;
   justify-content: space-between;
-  overflow: hidden;
   position: fixed;
   transition: 0.3s;
   width: 100%;
   z-index: 2;
-}
-
-.l-header.is-relative {
-  position: relative;
 }
 
 .l-header.is-absolute {
@@ -210,12 +205,13 @@ a:hover {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
+  padding-top: 80px;
 }
 
 @media screen and (max-width: 414px) {
   .c-account-list__container {
     width: 100%;
+    padding-top: 60px;
   }
 }
 
@@ -395,11 +391,11 @@ a:hover {
 @media screen and (max-width: 414px) {
   .c-nav-menu {
     display: block;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: -100%;
     background: rgba(255, 255, 255, 0.85);
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     padding-top: 50px;
     transition: 0.5s;
@@ -451,7 +447,7 @@ a:hover {
     margin-left: initial;
     margin-bottom: 10px;
     text-align: center;
-    background-color: #efe7f1;
+    background-color: rgba(220, 203, 219, 0.7);
     border-radius: 20px;
   }
 
@@ -517,6 +513,7 @@ a:hover {
   background-blend-mode: lighten;
   background-color: rgba(255, 255, 255, 0.3);
   height: 830px;
+  padding-top: 60px;
 }
 
 @media screen and (max-width: 414px) {
@@ -914,7 +911,7 @@ a:hover {
   .c-login__container {
     height: 100vh;
     width: 100%;
-    top: 80px;
+    top: 60px;
   }
 }
 
@@ -1051,15 +1048,16 @@ a:hover {
 
 .c-news__container {
   width: 980px;
-  margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 80px;
 }
 
 @media screen and (max-width: 414px) {
   .c-news__container {
     width: 100%;
     margin-bottom: 60px;
+    padding-top: 60px;
   }
 }
 
@@ -1191,25 +1189,32 @@ a:hover {
   margin-top: 10px;
 }
 
+@media screen and (max-width: 414px) {
+  .c-remainder__submit {
+    margin-left: initial;
+    left: 39px;
+  }
+}
+
 .c-remainder__container {
-  position: relative;
-  width: 580px;
+  display: flex;
   height: 250px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 60px;
-  display: flex;
-  background-color: #eef6f7;
+  padding-top: 200px;
+  position: relative;
+  width: 580px;
 }
 
 @media screen and (max-width: 414px) {
   .c-remainder__container {
+    padding-top: 100px;
     width: 100%;
   }
 }
 
 .c-remainder__form {
-  margin-top: 10px;
+  background-color: #eef6f7;
   margin-bottom: 10px;
   width: 100%;
 }
@@ -1218,6 +1223,7 @@ a:hover {
   color: #616265;
   font-size: 16px;
   margin-left: 15px;
+  margin-top: 10px;
   position: relative;
   width: 145px;
   background-color: #8eefc6;
@@ -1230,6 +1236,12 @@ a:hover {
   position: relative;
   margin-left: 50px;
   margin-top: 50px;
+}
+
+@media screen and (max-width: 414px) {
+  .c-reset {
+    margin-left: 35px;
+  }
 }
 
 .c-reset__label {
@@ -1248,6 +1260,7 @@ a:hover {
   color: #616265;
   font-size: 16px;
   margin-left: 15px;
+  margin-top: 10px;
   position: relative;
   width: 145px;
   background-color: #8eefc6;
@@ -1267,7 +1280,7 @@ a:hover {
 
 @media screen and (max-width: 414px) {
   .c-reset__submit {
-    left: 50px;
+    left: 35px;
     margin-left: initial;
     position: relative;
   }
@@ -1288,13 +1301,13 @@ a:hover {
   height: 400px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 60px;
   display: flex;
-  background-color: #eef6f7;
+  padding-top: 150px;
 }
 
 @media screen and (max-width: 414px) {
   .c-reset__container {
+    padding-top: 100px;
     width: 100%;
   }
 }
@@ -1302,6 +1315,14 @@ a:hover {
 .c-reset__form {
   margin-top: 10px;
   margin-bottom: 10px;
+  background-color: #eef6f7;
+  padding-right: 50px;
+}
+
+@media screen and (max-width: 414px) {
+  .c-reset__form {
+    padding-right: initial;
+  }
 }
 
 .c-twitter-auth {
@@ -1323,16 +1344,17 @@ a:hover {
   font-size: 16px;
   line-height: 1.5em;
   color: #555;
-  margin-top: 100px;
   margin-bottom: 15px;
   width: 70%;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 200px;
 }
 
 @media screen and (max-width: 414px) {
   .c-twitter-auth__information {
     width: 80%;
+    padding-top: 100px;
   }
 }
 

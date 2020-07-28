@@ -14,14 +14,15 @@
       font-size: $font-size_default;
       line-height: 1.5em;
       color: #555;
-      margin-top: 100px;
       margin-bottom: $space_l;
       width: 70%;
       margin-left: auto;
       margin-right: auto;
+      padding-top: 200px;
 
       @include mq() {
           width: 80%;
+          padding-top: 100px;
       }
 
       &--title {

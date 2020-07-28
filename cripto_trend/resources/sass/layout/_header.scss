@@ -7,14 +7,15 @@
   display: flex;
   height: 60px;
   justify-content: space-between;
-  overflow: hidden;
+  // overflow: hidden;
   position: fixed;
   transition: .3s;
   width: 100%;
   z-index: 2;
 
   &.is-relative {
-    position: relative;
+    // position: relative;
+    // top: 0;
   }
   &.is-absolute {
     position: absolute;

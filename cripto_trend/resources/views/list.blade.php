@@ -3,7 +3,7 @@
     Account List
 @endcomponent
 <body>
-    @component('components.header_relative')
+    @component('components.header')
     @endcomponent
 
     <main>

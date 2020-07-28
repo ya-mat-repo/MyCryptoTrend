@@ -4,12 +4,13 @@
 .c-nav-menu {
   @include mq() {
     display: block;
-    position: fixed;
-    // position: absolute;
+    // position: fixed;
+    position: absolute;
     top: 0;
     right: -100%;
     background: rgba(255, 255, 255, .85);
-    width: 100%;
+    // width: 100%;
+    width: 100vw;
     height: 100vh;
     padding-top: 50px;
     transition: .5s;
@@ -58,7 +59,7 @@
     margin-bottom: $space_m;
     // text-align: left;
     text-align: center;
-    background-color: #efe7f1;
+    background-color: rgba(220, 203, 219, 0.7);
     border-radius: 20px;
 
     &:last-child {

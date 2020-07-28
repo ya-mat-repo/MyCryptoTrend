@@ -69,10 +69,6 @@
                 </template>
             </tbody>
         </table>
-                    <!-- <form action="/list" method="POST">
-                        <input type="text" value="account['twitter_account_name']" name="targetAccount">
-                        <button class="c-button__follow" type="submit">フォローする</button>
-                    </form> -->
     </div>
 </template>
 
