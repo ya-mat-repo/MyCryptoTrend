@@ -9,12 +9,14 @@
 
         <div id="app">
             <main>
-                <section class="p-hero js-float-menu-target" style="background-image: url({{ asset('img/hero2.jpg') }});">
+                {{-- <section class="p-hero js-float-menu-target" style="background-image: url({{ asset('img/hero2.jpg') }});"> --}}
+                <section class="p-hero js-float-menu-target">
                     <!-- <p class="p-hero__title is-left">トレンドを</p> -->
                     <p class="p-hero__title is-center">Be aware of trends!</p>
                     <!-- <p class="p-hero__title is-right">掴む！</p> -->
                 </section>
-                <section class="c-strength-container" style="background-image: url({{ asset('img/eucalyptus_m.jpg') }});">
+                {{-- <section class="c-strength-container" style="background-image: url({{ asset('img/eucalyptus_m.jpg') }});"> --}}
+                <section class="c-strength-container">
                     <p class="c-strength-container__label">Crypto Trendのメリット</p>
                     <div class="c-strength-container__text">
                         <span class="p-message__item"><i class="fas fa-check p-icon__check"></i>ツイート数の比較でトレンドが瞬時に分かる！</span>
