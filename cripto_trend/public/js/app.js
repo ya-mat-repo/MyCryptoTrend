@@ -38134,25 +38134,21 @@ var render = function() {
                   ]
             ]
           : [
-              _c(
-                "form",
-                { attrs: { action: "/twitter_auth", method: "GET" } },
-                [
-                  _c("input", {
-                    attrs: { type: "hidden", name: "_token" },
-                    domProps: { value: _vm.csrfToken }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass: "c-button__follow",
-                      attrs: { type: "submit" }
-                    },
-                    [_vm._v("認証する")]
-                  )
-                ]
-              )
+              _c("form", { attrs: { action: "twitter_auth", method: "GET" } }, [
+                _c("input", {
+                  attrs: { type: "hidden", name: "_token" },
+                  domProps: { value: _vm.csrfToken }
+                }),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "c-button__follow",
+                    attrs: { type: "submit" }
+                  },
+                  [_vm._v("認証する")]
+                )
+              ])
             ]
       ],
       2
@@ -38271,7 +38267,7 @@ var render = function() {
                                   "form",
                                   {
                                     attrs: {
-                                      action: "/unfollow_account",
+                                      action: "unfollow_account",
                                       method: "POST"
                                     }
                                   },
@@ -38319,7 +38315,7 @@ var render = function() {
                                   "form",
                                   {
                                     attrs: {
-                                      action: "/follow_account",
+                                      action: "follow_account",
                                       method: "POST"
                                     }
                                   },
@@ -38363,7 +38359,7 @@ var render = function() {
                           _c(
                             "form",
                             {
-                              attrs: { action: "/twitter_auth", method: "GET" }
+                              attrs: { action: "twitter_auth", method: "GET" }
                             },
                             [
                               _c("input", {

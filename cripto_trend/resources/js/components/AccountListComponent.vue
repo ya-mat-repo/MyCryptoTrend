@@ -12,7 +12,7 @@
                 </template>
             </template>
             <template v-else>
-                <form action="/twitter_auth" method="GET">
+                <form action="twitter_auth" method="GET">
                     <input type="hidden" :value="csrfToken" name="_token"/>
                     <button class="c-button__follow" type="submit">認証する</button>
                 </form>
@@ -42,7 +42,7 @@
                         <td class="c-account-table__data">
                             <template v-if="is_twitter_auth">
                                 <template v-if="account['is_follow_flag']">
-                                    <form action="/unfollow_account" method="POST">
+                                    <form action="unfollow_account" method="POST">
                                         <input type="hidden" :value="csrfToken" name="_token"/>
                                         <input type="hidden" name="targetId" :value="account['id']"/>
                                         <input type="hidden" name="targetAccount" :value="account['twitter_user_name']"/>
@@ -50,7 +50,7 @@
                                     </form>
                                 </template>
                                 <template v-else>
-                                    <form action="/follow_account" method="POST">
+                                    <form action="follow_account" method="POST">
                                         <input type="hidden" :value="csrfToken" name="_token"/>
                                         <input type="hidden" name="targetId" :value="account['id']"/>
                                         <input type="hidden" name="targetAccount" :value="account['twitter_user_name']"/>
@@ -59,7 +59,7 @@
                                 </template>
                             </template>
                             <template v-else>
-                                <form action="/twitter_auth" method="GET">
+                                <form action="twitter_auth" method="GET">
                                     <input type="hidden" :value="csrfToken" name="_token"/>
                                     <button class="c-button__follow" type="submit">認証する</button>
                                 </form>
