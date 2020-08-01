@@ -1,6 +1,15 @@
 <!doctype html>
     @component('components.head')
-        Reset
+        @slot('title')
+            パスワード再設定
+        @endslot
+        @slot('description')
+            仮想通貨情報収集サービス「Crypto Trend」のパスワード再設定用ページです。
+            本ページにて新しいパスワードの設定が可能です。
+        @endslot
+        @slot('keywords')
+            Crypto Trend,パスワード,再設定
+        @endslot
     @endcomponent
 
     <body>

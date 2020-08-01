@@ -13,7 +13,7 @@
   &__information {
       font-size: $font-size_default;
       line-height: 1.5em;
-      color: #555;
+      color: $font-color-default;
       margin-bottom: $space_l;
       width: 70%;
       margin-left: auto;
@@ -43,19 +43,19 @@
 
   &__submit {
       position: relative;
-      width: 82px;
-      height: 46px;
-      line-height: 46px;
+      height: 50px;
+      line-height: 50px;
       color: #f6f5f4;
       border-style: none;
-      background-color: #4aace4;
+      background-color: $color-twitter-blue;
       display: block;
       margin-left: auto;
       margin-right: auto;
       transition: .2s;
+      width: 100px;
       
       &.is-auth {
-          background-color: #a1a1a1;
+          background-color: $color-inactive;
       }
 
       &:hover {

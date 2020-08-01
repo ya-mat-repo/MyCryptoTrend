@@ -41,7 +41,6 @@
 @import 'object/component/index';
 @import 'object/component/login';
 @import 'object/component/news';
-@import 'object/component/register';
 @import 'object/component/remainder';
 @import 'object/component/resetpassword';
 @import 'object/component/twitterauth';
@@ -71,7 +70,7 @@
 
     @include mq() {
       background-color: #f6f5f4;
-      margin-bottom: 60px;
+      margin-bottom: 80px;
       width: 100%;
     }
 }

@@ -1,6 +1,16 @@
 <!doctype html>
 @component('components.head')
-    Account List
+    @slot('title')
+        仮想通貨関連アカウント
+    @endslot
+    @slot('description')
+        仮想通貨情報収集サービス「Crypto Trend」の仮想通貨関連アカウントの一覧です。
+        各アカウントのフォロー数、フォロワー数、最新のツイートを表示しています。
+        本ページから対象のアカウントをフォローすることができます。
+    @endslot
+    @slot('keywords')
+        Crypto Trend,アカウント,フォロー,フォロワー,ツイート
+    @endslot
 @endcomponent
 <body>
     @component('components.header')

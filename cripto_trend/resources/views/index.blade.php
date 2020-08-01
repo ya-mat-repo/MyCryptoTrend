@@ -1,6 +1,16 @@
 <!doctype html>
     @component('components.head')
-        Top
+        @slot('title')
+            Crypto Trendのご紹介
+        @endslot
+        @slot('description')
+            仮想通貨情報収集サービス「Crypto Trend」のトップページです。
+            「Crypto Trend」では、Twitterアカウントと連携した仮想通貨関連アカウントの自動フォローや
+            Google Newsから仮想通貨関連のニュースを取得し一覧で表示するサービスを提供しています。
+        @endslot
+        @slot('keywords')
+            Crypto Trend,ご紹介,自動フォロー,Twitter,仮想通貨,ニュース,Google News
+        @endslot
     @endcomponent
 
     <body>
@@ -9,13 +19,9 @@
 
         <div id="app">
             <main>
-                {{-- <section class="p-hero js-float-menu-target" style="background-image: url({{ asset('img/hero2.jpg') }});"> --}}
                 <section class="p-hero js-float-menu-target">
-                    <!-- <p class="p-hero__title is-left">トレンドを</p> -->
                     <p class="p-hero__title is-center">Be aware of trends!</p>
-                    <!-- <p class="p-hero__title is-right">掴む！</p> -->
                 </section>
-                {{-- <section class="c-strength-container" style="background-image: url({{ asset('img/eucalyptus_m.jpg') }});"> --}}
                 <section class="c-strength-container">
                     <p class="c-strength-container__label">Crypto Trendのメリット</p>
                     <div class="c-strength-container__text">
@@ -29,7 +35,7 @@
                     <div class="p-appeal is-left">
                     <div class="p-image__container">
                         <p class="p-appeal__title">Point<span class="is-red">01</span></p>
-                        <img class="p-appeal__image" src="{{ asset('img/business_item.jpg') }}" alt="No image">
+                        <img class="p-appeal__image" src="{{ asset('img/business_item_m.jpg') }}" alt="No image">
                     </div>
                     <div class="p-appeal__text">
                         <img class="p-title__icon" src="{{ asset('img/icon-hanepen.png') }}" alt="No image">
@@ -38,8 +44,6 @@
                         Twitter上での仮想通貨ごとのツイート数を自動で取得し、ツイート数の多い順に表示します。
                         ツイート数を比較することで仮想通貨のトレンドを瞬時に把握できます。
                         </span>
-                        {{-- <span class="p-appeal__message">情報収集したい通貨を選べる！</span>
-                        <span class="p-appeal__message">発信元を自動でフォローできる！</span> --}}
                     </div>
                     </div>
                     <!-- Point02 -->
@@ -56,8 +60,6 @@
                         一覧で表示し、画面上からフォローすることができます。
                         また、自動フォロー機能を使用することで一覧表示されているアカウントを自動でフォローできます。
                         </span>
-                        {{-- <span class="p-appeal__message">情報収集したい通貨を選べる！</span>
-                        <span class="p-appeal__message">発信元を自動でフォローできる！</span> --}}
                     </div>
                     </div>
                     <!-- Point03 -->
@@ -74,14 +76,12 @@
                         仮想通貨関連のニュースを一覧で表示します。
                         自ら探す手間が省け、多忙な時でも大切な情報を逃しません！
                         </span>
-                        {{-- <span class="p-appeal__message">情報収集したい通貨を選べる！</span>
-                        <span class="p-appeal__message">発信元を自動でフォローできる！</span> --}}
                     </div>
                     </div>
                 </section>
-                <div class="c-register__btn"><a href="{{ url("/register") }}">今すぐ無料で登録！</a></div>
-                
-                    {{-- <index-component></index-component> --}}
+                @if (!Auth::check())
+                    <div class="c-register__btn"><a class="c-register__link" href="{{ url("/register") }}">今すぐ無料で登録！</a></div>
+                @endif
             </main>
         </div>
 

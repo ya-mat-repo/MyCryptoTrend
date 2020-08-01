@@ -6,7 +6,7 @@
 
   @include mq() {
     width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     padding-top: 60px;
   }
 }
@@ -85,6 +85,7 @@
 
       @include mq() {
         height: 28px;
+        margin-bottom: $space_s;
       }
   }
 }

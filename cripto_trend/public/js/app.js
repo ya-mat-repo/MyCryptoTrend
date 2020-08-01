@@ -2030,142 +2030,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/IndexComponent.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/IndexComponent.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['tweet_counts_json', 'ticker_response_json', 'count_updated_at'],
-  data: function data() {
-    return {
-      currencyName: {
-        "BTC": "ビットコイン",
-        "ETH": "イーサリアム",
-        "ETC": "イーサリアムクラシック",
-        "LSK": "リスク",
-        "FCT": "ファクトム",
-        "XRP": "リップル",
-        "XEM": "ネム",
-        "LTC": "ライトコイン",
-        "BCH": "ビットコインキャッシュ",
-        "MONA": "モナーコイン",
-        "XLM": "ステラ・ルーメン",
-        "QTUM": "クアンタム"
-      },
-      checkBtn: {
-        // "ALL" : true,
-        "BTC": true,
-        "ETH": true,
-        "ETC": true,
-        "LSK": true,
-        "FCT": true,
-        "XRP": true,
-        "XEM": true,
-        "LTC": true,
-        "BCH": true,
-        "MONA": true,
-        "XLM": true,
-        "QTUM": true
-      },
-      term: "DAY"
-    };
-  },
-  methods: {
-    selectAll: function selectAll() {
-      var $that = this;
-      Object.keys($that.checkBtn).forEach(function (key) {
-        $that.checkBtn[key] = true;
-      });
-    },
-    cancelAll: function cancelAll() {
-      var $that = this;
-      Object.keys($that.checkBtn).forEach(function (key) {
-        $that.checkBtn[key] = false;
-      });
-    }
-  }
-});
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/NewsListComponent.vue?vue&type=script&lang=js&":
 /*!****************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/NewsListComponent.vue?vue&type=script&lang=js& ***!
@@ -2181,11 +2045,6 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-//
-//
-//
-//
-//
 //
 //
 //
@@ -2316,8 +2175,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
 //
 //
 //
@@ -38090,7 +37947,7 @@ var render = function() {
       "form",
       {
         staticClass: "c-auto-follow",
-        attrs: { method: "POST", action: "/auto_follow" }
+        attrs: { method: "POST", action: "auto_follow" }
       },
       [
         _c("input", {
@@ -38164,9 +38021,11 @@ var render = function() {
           _vm._l(_vm.candidates_json["data"], function(account, key) {
             return [
               _c("tr", { key: key, staticClass: "c-account-table__row" }, [
-                _c("td", { staticClass: "c-account-table__data" }, [
-                  _vm._v(_vm._s(account["twitter_user_name"]))
-                ]),
+                _c(
+                  "td",
+                  { staticClass: "c-account-table__data is-user-name" },
+                  [_vm._v(_vm._s(account["twitter_user_name"]))]
+                ),
                 _vm._v(" "),
                 _c("td", { staticClass: "c-account-table__data" }, [
                   _c("textarea", {
@@ -38476,154 +38335,6 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/IndexComponent.vue?vue&type=template&id=754b2df6&":
-/*!*****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/IndexComponent.vue?vue&type=template&id=754b2df6& ***!
-  \*****************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "c-base__container" }, [
-      _c("section", { staticClass: "p-hero" }, [
-        _c("p", { staticClass: "p-hero__title is-center" }, [
-          _vm._v("Be aware of trends!")
-        ])
-      ]),
-      _vm._v(" "),
-      _c("section", { staticClass: "c-container" }, [
-        _c("div", { staticClass: "c-container__text" }, [
-          _c("span", { staticClass: "p-message__item" }, [
-            _c("i", { staticClass: "fas fa-check p-icon__check" }),
-            _vm._v("投資に大切なのは、第一に情報！")
-          ]),
-          _vm._v(" "),
-          _c("span", { staticClass: "p-message__item" }, [
-            _c("i", { staticClass: "fas fa-check p-icon__check" }),
-            _vm._v("貴方にあった、貴方だけの情報を、スピーディーに取得できる！")
-          ]),
-          _vm._v(" "),
-          _c("span", { staticClass: "p-message__item" }, [
-            _c("i", { staticClass: "fas fa-check p-icon__check" }),
-            _vm._v("それが、仮想通貨トレンド収集サービス、Cripto Trend！")
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("section", { staticClass: "p-appeal__container" }, [
-        _c("div", { staticClass: "p-appeal is-left" }, [
-          _c("div", { staticClass: "p-image__container" }, [
-            _c("p", { staticClass: "p-appeal__title" }, [
-              _vm._v("Point"),
-              _c("span", { staticClass: "is-red" }, [_vm._v("01")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "p-appeal__text" }, [
-            _c("span", { staticClass: "p-text__title" }, [
-              _vm._v("トレンドを瞬時に把握できる！")
-            ]),
-            _vm._v(" "),
-            _c("span", { staticClass: "p-appeal__message" }, [
-              _vm._v(
-                "\n          Twitter上でのツイート数を自動で取得しツイート数の多い順に表示します。\n          ツイート数のランキングを見ることで仮想通貨のトレンドの把握に役立ちます。\n        "
-              )
-            ]),
-            _vm._v("\n        {{-- "),
-            _c("span", { staticClass: "p-appeal__message" }, [
-              _vm._v("情報収集したい通貨を選べる！")
-            ]),
-            _vm._v(" "),
-            _c("span", { staticClass: "p-appeal__message" }, [
-              _vm._v("発信元を自動でフォローできる！")
-            ]),
-            _vm._v(" --}}\n      ")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "p-appeal is-right" }, [
-          _c("div", { staticClass: "p-image__container" }, [
-            _c("p", { staticClass: "p-appeal__title" }, [
-              _vm._v("Point"),
-              _c("span", { staticClass: "is-red" }, [_vm._v("02")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "p-appeal__text" }, [
-            _c("span", { staticClass: "p-text__title" }, [
-              _vm._v("Twitterアカウントをフォローできる！")
-            ]),
-            _vm._v(" "),
-            _c("span", { staticClass: "p-appeal__message" }, [
-              _vm._v(
-                "\n          仮想通貨というキーワードをユーザー名またはプロフィールに記載しているユーザーを\n          一覧で表示し、その画面上からフォローすることができます。\n          また、自動フォロー機能を使用することで一覧表示されているアカウントを自動でフォローできます。\n        "
-              )
-            ]),
-            _vm._v("\n        {{-- "),
-            _c("span", { staticClass: "p-appeal__message" }, [
-              _vm._v("情報収集したい通貨を選べる！")
-            ]),
-            _vm._v(" "),
-            _c("span", { staticClass: "p-appeal__message" }, [
-              _vm._v("発信元を自動でフォローできる！")
-            ]),
-            _vm._v(" --}}\n      ")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "p-appeal is-left" }, [
-          _c("div", { staticClass: "p-image__container" }, [
-            _c("p", { staticClass: "p-appeal__title" }, [
-              _vm._v("Point"),
-              _c("span", { staticClass: "is-red" }, [_vm._v("03")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "p-appeal__text" }, [
-            _c("span", { staticClass: "p-text__title" }, [
-              _vm._v("ニュースを自動で収集できる！")
-            ]),
-            _vm._v(" "),
-            _c("span", { staticClass: "p-appeal__message" }, [
-              _vm._v(
-                "\n          Google Newsから「仮想通貨」というキーワードで自動で検索し、\n          仮想通貨関連のニュースを一覧で表示します。\n          自ら探す手間が省け、多忙な時でも大切な情報を逃しません！\n        "
-              )
-            ]),
-            _vm._v("\n        {{-- "),
-            _c("span", { staticClass: "p-appeal__message" }, [
-              _vm._v("情報収集したい通貨を選べる！")
-            ]),
-            _vm._v(" "),
-            _c("span", { staticClass: "p-appeal__message" }, [
-              _vm._v("発信元を自動でフォローできる！")
-            ]),
-            _vm._v(" --}}\n      ")
-          ])
-        ])
-      ])
-    ])
-  }
-]
-render._withStripped = true
-
-
-
-/***/ }),
-
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/NewsListComponent.vue?vue&type=template&id=5a7b6911&":
 /*!********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/NewsListComponent.vue?vue&type=template&id=5a7b6911& ***!
@@ -38683,14 +38394,27 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("a", { attrs: { href: content.link, target: "_blank" } }, [
-                _c(
-                  "textarea",
-                  {
-                    staticClass: "c-news__item--title",
-                    attrs: { cols: "100", rows: "1", readonly: "" }
-                  },
-                  [_vm._v(_vm._s(content.title))]
-                )
+                _c("textarea", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: content["title"],
+                      expression: "content['title']"
+                    }
+                  ],
+                  staticClass: "c-news__item--title",
+                  attrs: { cols: "100", rows: "1", readonly: "" },
+                  domProps: { value: content["title"] },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(content, "title", $event.target.value)
+                    }
+                  }
+                })
               ])
             ])
           }),
@@ -51238,7 +50962,6 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
-Vue.component('index-component', __webpack_require__(/*! ./components/IndexComponent.vue */ "./resources/js/components/IndexComponent.vue")["default"]);
 Vue.component('show-trend-component', __webpack_require__(/*! ./components/ShowTrendComponent.vue */ "./resources/js/components/ShowTrendComponent.vue")["default"]);
 Vue.component('account-list-component', __webpack_require__(/*! ./components/AccountListComponent.vue */ "./resources/js/components/AccountListComponent.vue")["default"]);
 Vue.component('news-list-component', __webpack_require__(/*! ./components/NewsListComponent.vue */ "./resources/js/components/NewsListComponent.vue")["default"]);
@@ -51432,75 +51155,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/components/IndexComponent.vue":
-/*!****************************************************!*\
-  !*** ./resources/js/components/IndexComponent.vue ***!
-  \****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _IndexComponent_vue_vue_type_template_id_754b2df6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./IndexComponent.vue?vue&type=template&id=754b2df6& */ "./resources/js/components/IndexComponent.vue?vue&type=template&id=754b2df6&");
-/* harmony import */ var _IndexComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./IndexComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/IndexComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _IndexComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _IndexComponent_vue_vue_type_template_id_754b2df6___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _IndexComponent_vue_vue_type_template_id_754b2df6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/IndexComponent.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/IndexComponent.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************!*\
-  !*** ./resources/js/components/IndexComponent.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_IndexComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./IndexComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/IndexComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_IndexComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/IndexComponent.vue?vue&type=template&id=754b2df6&":
-/*!***********************************************************************************!*\
-  !*** ./resources/js/components/IndexComponent.vue?vue&type=template&id=754b2df6& ***!
-  \***********************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_IndexComponent_vue_vue_type_template_id_754b2df6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./IndexComponent.vue?vue&type=template&id=754b2df6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/IndexComponent.vue?vue&type=template&id=754b2df6&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_IndexComponent_vue_vue_type_template_id_754b2df6___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_IndexComponent_vue_vue_type_template_id_754b2df6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

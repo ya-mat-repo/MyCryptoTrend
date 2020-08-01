@@ -7,16 +7,15 @@
   display: flex;
   height: 60px;
   justify-content: space-between;
-  // overflow: hidden;
   position: fixed;
   transition: .3s;
   width: 100%;
   z-index: 2;
 
-  &.is-relative {
-    // position: relative;
-    // top: 0;
+  @include mq() {
+    background-color: rgba(255,255,255,0.8);
   }
+
   &.is-absolute {
     position: absolute;
     top: 0;

@@ -38,7 +38,6 @@ class TwitterAuthController extends Controller
         // =============================
         $api_key = 'u8GXSucbr7JvGzWb2TonppQgL';
         $api_secret = 'rYVAprz5SDwEUoIDL1bLlOphVCs9gnptdWPadzBR7KbSrIbX31';
-        // $callback_url = 'http://localhost:8000/get_access_token';
         $callback_url = env('APP_URL') . '/get_access_token';
         
         // [アクセストークンシークレット] (まだ存在しないので空文字を設定)
@@ -114,9 +113,6 @@ class TwitterAuthController extends Controller
         // 取得したデータ
         $response = substr($res1, $res2["header_size"]); // 取得したデータ（jsonなど）
         $header = substr($res1, 0, $res2["header_size"]); // レスポンスヘッダー（検証用）
-
-        // [cURL]ではなく、[file_get_contents()]を使うには下記の通り
-        // $response = file_get_contents( $request_url , false , stream_context_create( $context ) ) ;
 
         // リクエストトークンを取得できなかった場合
         if (!$response) {
@@ -230,19 +226,12 @@ class TwitterAuthController extends Controller
             // aaa=AAA&bbb=BBB → [ "aaa"=>"AAA", "bbb"=>"BBB" ]
             $response_array = [];
             parse_str($response, $response_array);
-            // 配列の内容を出力する (デバッグ用)
-            // foreach ($response_array as $key => $value) {
-            //     Log::debug('>>>>> ' . $key . ':' . $value);
-            // }
             $email = Auth::User()->email;
             $access_token = $response_array['oauth_token'];
             $access_token_secret = $response_array['oauth_token_secret'];
             Log::debug('>>>>> $email = ' . $email);
             Log::debug('>>>>> $access_token = ' . $access_token);
             Log::debug('>>>>> $access_token_secret = ' . $access_token_secret);
-
-            Log::debug('>>>>> mb_strlen(encrypt($access_token)) = ' . mb_strlen(encrypt($access_token)));
-            Log::debug('>>>>> mb_strlen(encrypt($access_token_secret)) = ' . mb_strlen(encrypt($access_token_secret)));
 
             // アクセストークンをDBに登録
             $flash_message = '';
@@ -253,10 +242,6 @@ class TwitterAuthController extends Controller
                     'email' => $email,
                     'access_token' => base64_encode($access_token),
                     'access_token_secret' => base64_encode($access_token_secret),
-                    // 'access_token' => Crypt::encryptString($access_token),
-                    // 'access_token_secret' => Crypt::encryptString($access_token_secret),
-                    // 'access_token' => encrypt($access_token),
-                    // 'access_token_secret' => encrypt($access_token_secret),
                 ]);
                 $flash_message = 'Twitterアカウントの認証に成功しました。';
             }
@@ -265,8 +250,8 @@ class TwitterAuthController extends Controller
             Log::debug('>>>>> 連携を拒否しました。');
             exit;
         }
-
-        $is_twitter_auth = (empty($twitterAuth)) ? false : true;
+        
+        $is_twitter_auth = (empty(TwitterAuth::where('email', $email)->first())) ? false : true;
         return view('twitter_auth', compact('is_twitter_auth'))->with(compact('flash_message'));
     }
 }

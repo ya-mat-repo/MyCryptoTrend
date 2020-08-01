@@ -16,7 +16,7 @@
 
   &__header {
       margin-bottom: $space_m;
-      background-color: #4aace4;
+      background-color: $color-twitter-blue;
       color: #f6f5f4;
       height: 28px;
       line-height: 28px;
@@ -53,6 +53,12 @@
       border: solid 1px #f6f5f4;
       border-collapse: collapse;
 
+      &.is-user-name {
+        @include mq() {
+          padding-left: $space_s;
+        }
+      }
+
       &:last-child {
           border: none;
       }
@@ -61,13 +67,17 @@
           text-align: right;
           padding-right: $space_m;
           font-size: $font-size_m;
+          
+          @include mq() {
+            padding-right: $space_s;
+          }
       }
   }
 
   &__textarea {
       border: solid 1px #f6f5f4;
       border-collapse: collapse;
-      color: #555;
+      color: $font-color-default;
       vertical-align: middle;
       box-sizing: border-box;
       width: 100%;
@@ -86,7 +96,7 @@
   text-align: center;
   vertical-align: middle;
   color: #f6f5f4;
-  background-color: #4aace4;
+  background-color: $color-twitter-blue;
   border: none;
   transition: .2s;
   font-size: 10px;

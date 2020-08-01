@@ -1,8 +1,17 @@
 <!doctype html>
 @component('components.head')
-    Auth twitter account
+    @slot('title')
+        Twitterアカウント認証
+    @endslot
+    @slot('description')
+        仮想通貨情報収集サービス「Crypto Trend」のTwitterアカウント認証用ページです。
+        本ページからTwitterアカウントの認証を行うことで自動フォロー機能や
+        手動でのアカウントのフォローが可能になります。
+    @endslot
+    @slot('keywords')
+        Crypto Trend,アカウント,認証,Twitter,自動フォロー,フォロー
+    @endslot
 @endcomponent
-
 <body>
     @component('components.header')
     @endcomponent

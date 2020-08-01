@@ -53,35 +53,35 @@
 }
 
 .c-register__btn {
-  width: 280px;
-  height: 84px;
-  line-height: 84px;
-  font-size: $font-size_xl;
-  background-color: #f11414bd;
+  background-color: $color-attention;
+  border-radius: 15px;
+  box-shadow: 0 0 3px 0 rgba(0,0,0,.12), 0 2px 3px 0 rgba(0,0,0,.22);
   color: $color-base;
-  text-align: center;
+  font-size: $font-size_l;
+  height: 80px;
+  line-height: 80px;
+  margin-bottom: $space_3l;
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
-  margin-bottom: $space_3l;
-  border-radius: 15px;
-  box-shadow: 0 0 3px 0 rgba(0,0,0,.12), 0 2px 3px 0 rgba(0,0,0,.22);
+  text-align: center;
   transition: .3s;
+  width: 250px;
 
   @include mq() {
     font-size: 18px;
     height: 60px;
     line-height: 60px;
     margin-top: 50px;
-    width: 60%;
+    width: 70%;
   }
   
   &:hover {
     box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
 	  transform: translateY(-4px);
   }
-
-  & a {
-    padding: 30px;
-  }
+}
+.c-register__link {
+  color: $color-base;
+  padding: 30px;
 }

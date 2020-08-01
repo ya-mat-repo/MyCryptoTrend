@@ -8,9 +8,8 @@
     font-size: $font-size_m;
     height: 40px;
     line-height: 40px;
-    margin-left: 234px;
+    margin-left: 240px;
     transition: .2s;
-    width: 80px;
 
     @include mq() {
       margin-left: initial;
@@ -38,12 +37,14 @@
 }
 
 .u-invalid--error {
-    color: red;
+    color: $color-error-bgblack;
     display: block;
-    font-size: 20px;
+    font-size: $font-size_default;
+    line-height: 1.2em;
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    text-align: center;
     top: 32px;
     width: 500px;
     
@@ -52,6 +53,18 @@
       text-align: center;
       top: 25px;
       width: 100%;
+    }
+
+    &.is-email-reset {
+      color: #d83d3d;
+      position: absolute;
+      top: -125px;
+      width: 100%;
+
+      @include mq() {
+        text-align: left;
+        top: -120px;
+      }
     }
 
     &.is-register {

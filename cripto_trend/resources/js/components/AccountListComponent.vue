@@ -1,6 +1,6 @@
 <template>
     <div class="c-account-list__container">
-        <form method="POST" action="/auto_follow" class="c-auto-follow">
+        <form method="POST" action="auto_follow" class="c-auto-follow">
             <input type="hidden" :value="csrfToken" name="_token"/>
             <span class="c-auto-follow__label">自動フォロー：</span>
             <template v-if="is_twitter_auth">
@@ -33,7 +33,7 @@
             <tbody>
                 <template v-for="(account, key) in  candidates_json['data']">
                     <tr class="c-account-table__row" :key="key">
-                        <td class="c-account-table__data">{{account['twitter_user_name']}}</td>
+                        <td class="c-account-table__data is-user-name">{{account['twitter_user_name']}}</td>
                         <td class="c-account-table__data"><textarea class="c-account-table__textarea" cols="20" rows="3" v-model="account['twitter_account_name']" readonly></textarea></td>
                         <td class="c-account-table__data is-right">{{Number(account['follows_count']).toLocaleString()}}</td>
                         <td class="c-account-table__data is-right">{{Number(account['followers_count']).toLocaleString()}}</td>

@@ -3,7 +3,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ $slot }} | Cripto Trend</title>
+    <meta name="description" content="{{ $description }}">
+    <meta name="keywords" content="{{ $keywords }}">
+    <title>{{ $title }} | Crypto Trend</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">

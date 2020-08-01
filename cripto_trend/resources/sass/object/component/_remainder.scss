@@ -9,6 +9,12 @@
       font-size: $font-size_default;
       height: 30px;
       width: 300px;
+      padding-left: $space_m;
+      padding-right: $space_m;
+
+      @include mq() {
+        width: calc(100% - 24px);
+      }
   }
 
   &__submit {
@@ -57,4 +63,19 @@
   padding: 5px 5px;
   border-radius: 10px;
   text-align: center;
+}
+
+.c-remainder__message {
+  line-height: 1.2em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  width: 500px;
+
+  @include mq() {
+    font-size: $font-size_m;
+    margin-left: $space_l;
+    margin-right: $space_l;
+    width: calc(100vw - 30px);
+  }
 }

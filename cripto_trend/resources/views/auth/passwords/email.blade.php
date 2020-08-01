@@ -1,7 +1,16 @@
 <!doctype html>
-    @component('components.head')
-        Reset
-    @endcomponent
+@component('components.head')
+    @slot('title')
+        パスワード再設定 | 案内メール送信
+    @endslot
+    @slot('description')
+        仮想通貨情報収集サービス「Crypto Trend」のパスワード再設定用ページです。
+        ご入力いただいたメールアドレス宛にパスワード再設定の案内メールをお送りします。
+    @endslot
+    @slot('keywords')
+        Crypto Trend,パスワード,再設定,案内,メール,メールアドレス
+    @endslot
+@endcomponent
 
     <body>
         @component('components.header')
@@ -9,12 +18,6 @@
 
         <div id="app">
             <div class="c-remainder__container">
-                @if (session('status'))
-                    <div class="c-flash-message" role="alert">
-                        {{ session('status') }}
-                    </div>
-                @endif
-
                 <form method="POST" action="{{ route('password.email') }}" class="c-remainder__form">
                     @csrf
 
@@ -24,7 +27,7 @@
                         <input id="email" type="email" class="c-remainder__input @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                         @error('email')
-                            <span class="u-invalid--error" role="alert">
+                            <span class="u-invalid--error is-email-reset" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
@@ -36,6 +39,12 @@
                     </div>
                 </form>
             </div>
+            @if (session('status'))
+                <div class="c-remainder__message">
+                    {{ session('status') }}
+                </div>
+            @endif
+
         </div>
         
         @component('components.footer')

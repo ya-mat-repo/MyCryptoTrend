@@ -1,5 +1,4 @@
 <template>
-    <!-- <div class="c-background__container" style="background-image: url('img/wall-tile_l.jpg') ;"> -->
     <div class="c-background__container">
         <div class="c-home__container">
             <div class="c-checkbox__area">
@@ -8,7 +7,6 @@
                     <button @click="selectAll" class="c-button__select is-all">全て選択</button>
                     <button @click="cancelAll" class="c-button__select is-cancel">全て解除</button>
                     <div v-for="(value, key) in currencyName" class="c-checkbox__container" :key="key">
-                        <!-- <input v-model="checkBtn[key]" type="checkbox" class="c-checkbox__item" value="key"><span class="c-checkbox__label">{{value}}({{key}})</span> -->
                         <input v-model="checkBtn[key]" type="checkbox" class="c-checkbox__item" value="key"><span class="c-checkbox__label">{{value}}<br class="u-sp-break">({{key}})</span>
                     </div>
                 </div>

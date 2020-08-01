@@ -1,8 +1,16 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    @component('components.head')
-        Register
-    @endcomponent
+@component('components.head')
+  @slot('title')
+      新規登録
+  @endslot
+  @slot('description')
+      仮想通貨情報収集サービス「Crypto Trend」の新規登録用ページです。
+  @endslot
+  @slot('keywords')
+      Crypto Trend,新規登録
+  @endslot
+@endcomponent
 
   <body>
 
@@ -38,6 +46,7 @@
                 </span>
                 @enderror
               </div>
+              <span class="c-message__validate">{{ __('E-Mail Format') }}</span>
               
               <div class="c-input__container">
                 <label for="password" class="c-login__label">{{ __('Password') }}</label>
@@ -49,6 +58,7 @@
                 </span>
                 @enderror
               </div>
+              <span class="c-message__validate">{{ __('Password Format') }}</span>
 
               <div class="c-input__container">
                 <label for="password-confirm" class="c-login__label">{{ __('Confirm Password') }}</label>

@@ -95,12 +95,7 @@ class AccountListController extends Controller
         // ======================================
         $target_id = $request->targetId;
         Log::debug('$targetId = ' . $target_id);
-        // $followed_user = FollowedAccount::where([
-        //     ['email', $email],
-        //     ['twitter_user_name', $target_account],
-        // ])->first();
         $followed_user = FollowedAccount::where('id', $target_id)->first();
-        // Log::debug('$followed_user = ' . print_r($followed_user, true));
         $flash_message = 'ユーザー [' . $target_account . '] をフォローしました。';
         if (empty($followed_user)) {
             Log::debug('ユーザー [' . $target_account . '] をフォローします。[新規]');
@@ -112,20 +107,10 @@ class AccountListController extends Controller
                 'candidate_id' => $candidate_id,
             ]);
         } else {
-            // followed_userが存在してis_follow_flagがtrueの場合は
-            // unfollowの処理に飛ぶのでこの分岐は通らないはず
-            // if ($followed_user->is_follow_flag) {
-            //     Log::debug('ユーザー [' . $target_account . '] はフォロー済みです。');
-            //     $flash_message = 'ユーザー [' . $target_account . '] はフォロー済みです。';
-            // } else {
-            //     Log::debug('ユーザー [' . $target_account . '] をフォローします。[更新]');
-            //     $followed_user->update(['is_follow_flag' => true]);
-            // }
             Log::debug('ユーザー [' . $target_account . '] をフォローします。[更新]');
             $followed_user->update(['is_follow_flag' => true]);
         }
 
-        // return back();
         return back()->with(compact('flash_message'));
     }
 
@@ -140,8 +125,6 @@ class AccountListController extends Controller
         $email = Auth::user()->email;
         $access_token = base64_decode(TwitterAuth::where('email', $email)->value('access_token'));
         $access_token_secret = base64_decode(TwitterAuth::where('email', $email)->value('access_token_secret'));
-        // $access_token = Crypt::decryptString(TwitterAuth::where('email', $email)->value('access_token'));
-        // $access_token_secret = Crypt::decryptString(TwitterAuth::where('email', $email)->value('access_token_secret'));
         
         // ==============================
         // アンフォロー対象のアカウント情報を取得
@@ -171,7 +154,6 @@ class AccountListController extends Controller
         $unfollowed_user->update(['is_follow_flag' => false]);
         $flash_message = 'ユーザー [' . $target_account . '] のフォローを解除しました。';
 
-        // return back();
         return back()->with(compact('flash_message'));
     }
     

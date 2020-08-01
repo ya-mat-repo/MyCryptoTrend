@@ -1,6 +1,14 @@
 <!doctype html>
     @component('components.head')
-        Login
+        @slot('title')
+            ログイン
+        @endslot
+        @slot('description')
+            仮想通貨情報収集サービス「Crypto Trend」のログインページです。
+        @endslot
+        @slot('keywords')
+            Crypto Trend,ログイン
+        @endslot
     @endcomponent
 
     <body>

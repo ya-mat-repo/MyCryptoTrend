@@ -32,7 +32,6 @@ class NewsController extends Controller
 
         Log::debug('=====> [' . count($contents_channel_item) . '] 件のニュースを取得しました。');
         $contents_json = json_encode($contents_channel_item, JSON_UNESCAPED_UNICODE);
-        // Log::debug('$contents_json = '. print_r($contents_json, true));
 
         return view('news', compact('contents_json'));
     }

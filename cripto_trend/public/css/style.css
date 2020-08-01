@@ -86,6 +86,11 @@ a:hover {
   width: 100%;
   z-index: 2;
 }
+@media screen and (max-width: 414px) {
+  .l-header {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
 .l-header.is-absolute {
   position: absolute;
   top: 0;
@@ -165,6 +170,11 @@ a:hover {
   border: solid 1px #f6f5f4;
   border-collapse: collapse;
 }
+@media screen and (max-width: 414px) {
+  .c-account-table__data.is-user-name {
+    padding-left: 5px;
+  }
+}
 .c-account-table__data:last-child {
   border: none;
 }
@@ -172,6 +182,11 @@ a:hover {
   text-align: right;
   padding-right: 10px;
   font-size: 14px;
+}
+@media screen and (max-width: 414px) {
+  .c-account-table__data.is-right {
+    padding-right: 5px;
+  }
 }
 .c-account-table__textarea {
   border: solid 1px #f6f5f4;
@@ -387,7 +402,7 @@ a:hover {
 }
 
 .c-background__container {
-  background-image: url(../img/wall-tile_l.jpg);
+  background-image: url(../img/home_backimage_l.jpg);
   background-blend-mode: lighten;
   background-color: rgba(255, 255, 255, 0.3);
   height: 830px;
@@ -396,8 +411,8 @@ a:hover {
 @media screen and (max-width: 414px) {
   .c-background__container {
     height: 100%;
-    background-image: none;
-    margin-bottom: 60px;
+    background-image: url(../img/home_backimage_m.jpg);
+    margin-bottom: 80px;
   }
 }
 
@@ -478,6 +493,11 @@ a:hover {
 .c-checkbox__container {
   display: block;
   line-height: 30px;
+}
+@media screen and (max-width: 414px) {
+  .c-checkbox__container {
+    margin-left: 5px;
+  }
 }
 
 .c-checkbox__item {
@@ -687,20 +707,20 @@ a:hover {
 }
 
 .c-register__btn {
-  width: 280px;
-  height: 84px;
-  line-height: 84px;
-  font-size: 24px;
   background-color: #f11414bd;
+  border-radius: 15px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
   color: #fffef9;
-  text-align: center;
+  font-size: 18px;
+  height: 80px;
+  line-height: 80px;
+  margin-bottom: 40px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
-  margin-bottom: 40px;
-  border-radius: 15px;
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
+  text-align: center;
   transition: 0.3s;
+  width: 250px;
 }
 @media screen and (max-width: 414px) {
   .c-register__btn {
@@ -708,14 +728,16 @@ a:hover {
     height: 60px;
     line-height: 60px;
     margin-top: 50px;
-    width: 60%;
+    width: 70%;
   }
 }
 .c-register__btn:hover {
   box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15), 0 0 5px rgba(0, 0, 0, 0.1);
   transform: translateY(-4px);
 }
-.c-register__btn a {
+
+.c-register__link {
+  color: #fffef9;
   padding: 30px;
 }
 
@@ -724,7 +746,7 @@ a:hover {
   height: 40px;
   line-height: 40px;
   position: relative;
-  font-size: 30px;
+  font-size: 24px;
   text-align: center;
   margin-bottom: 20px;
   font-family: "Noto Sans JP", sans-serif;
@@ -748,8 +770,8 @@ a:hover {
 }
 @media screen and (max-width: 414px) {
   .c-login__container {
-    height: 100vh;
-    width: 100%;
+    height: calc(100vh - 60px);
+    width: 100vw;
     top: 60px;
   }
 }
@@ -790,14 +812,33 @@ a:hover {
 }
 
 .c-login__input {
-  width: 380px;
+  width: 350px;
   height: 40px;
   font-size: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 @media screen and (max-width: 414px) {
   .c-login__input {
     height: 30px;
-    width: 100%;
+    width: calc(100% - 20px);
+  }
+}
+
+.c-message__validate {
+  color: #f3ffb7;
+  display: block;
+  font-size: 14px;
+  position: relative;
+  top: -30px;
+  width: 50%;
+  margin-left: 380px;
+}
+@media screen and (max-width: 414px) {
+  .c-message__validate {
+    font-size: 12px;
+    margin-left: 55px;
+    width: calc(100vw - 55px);
   }
 }
 
@@ -857,6 +898,7 @@ a:hover {
 }
 @media screen and (max-width: 414px) {
   .c-background__login {
+    background-image: url(../img/hero_m.jpg);
     height: initial;
     width: 100%;
   }
@@ -883,7 +925,7 @@ a:hover {
 @media screen and (max-width: 414px) {
   .c-news__container {
     width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     padding-top: 60px;
   }
 }
@@ -968,19 +1010,8 @@ a:hover {
 @media screen and (max-width: 414px) {
   .c-news-page__button {
     height: 28px;
+    margin-bottom: 5px;
   }
-}
-
-.c-background__register {
-  background-image: url(../../public/img/work_and_coffee.jpg);
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 800px;
-  background-color: rgba(255, 255, 255, 0.2);
-  background-blend-mode: lighten;
-  z-index: 1;
 }
 
 .c-remainder {
@@ -994,6 +1025,13 @@ a:hover {
   font-size: 16px;
   height: 30px;
   width: 300px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media screen and (max-width: 414px) {
+  .c-remainder__input {
+    width: calc(100% - 24px);
+  }
 }
 .c-remainder__submit {
   position: relative;
@@ -1044,6 +1082,22 @@ a:hover {
   text-align: center;
 }
 
+.c-remainder__message {
+  line-height: 1.2em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  width: 500px;
+}
+@media screen and (max-width: 414px) {
+  .c-remainder__message {
+    font-size: 14px;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100vw - 30px);
+  }
+}
+
 .c-reset {
   position: relative;
   margin-left: 50px;
@@ -1051,7 +1105,7 @@ a:hover {
 }
 @media screen and (max-width: 414px) {
   .c-reset {
-    margin-left: 35px;
+    margin-left: 25px;
   }
 }
 .c-reset__label {
@@ -1063,6 +1117,8 @@ a:hover {
   height: 30px;
   width: 300px;
   display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .c-reset__title {
   color: #616265;
@@ -1080,23 +1136,29 @@ a:hover {
   margin-bottom: 15px;
 }
 .c-reset__submit {
-  margin-left: auto;
-  width: 173px;
+  display: block;
+  margin-left: 205px;
 }
 @media screen and (max-width: 414px) {
   .c-reset__submit {
-    left: 35px;
-    margin-left: initial;
+    margin-left: 25px;
     position: relative;
   }
 }
 .c-reset--error {
-  color: red;
+  color: #d83d3d;
   display: block;
   font-size: 16px;
+  line-height: 1.2em;
   position: absolute;
-  top: -30px;
+  top: -122px;
   width: 500px;
+}
+@media screen and (max-width: 414px) {
+  .c-reset--error {
+    font-size: 14px;
+    width: calc(100vw - 35px);
+  }
 }
 
 .c-reset__container {
@@ -1173,9 +1235,8 @@ a:hover {
 }
 .c-twitter-auth__submit {
   position: relative;
-  width: 82px;
-  height: 46px;
-  line-height: 46px;
+  height: 50px;
+  line-height: 50px;
   color: #f6f5f4;
   border-style: none;
   background-color: #4aace4;
@@ -1183,6 +1244,7 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   transition: 0.2s;
+  width: 100px;
 }
 .c-twitter-auth__submit.is-auth {
   background-color: #a1a1a1;
@@ -1250,6 +1312,8 @@ a:hover {
 }
 @media screen and (max-width: 414px) {
   .p-hero {
+    background-attachment: initial;
+    background-image: url(../img/hero_m.jpg);
     height: 80vh;
   }
 }
@@ -1267,7 +1331,7 @@ a:hover {
 }
 @media screen and (max-width: 414px) {
   .p-hero__title.is-center {
-    font-size: 38px;
+    font-size: 30px;
     line-height: 80vh;
   }
 }
@@ -1358,6 +1422,11 @@ a:hover {
   display: block;
   margin-top: 10px;
 }
+@media screen and (max-width: 414px) {
+  .p-appeal__message {
+    font-size: 14px;
+  }
+}
 
 .p-image__container {
   position: relative;
@@ -1383,7 +1452,7 @@ a:hover {
 }
 @media screen and (max-width: 414px) {
   .p-text__title {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -1397,9 +1466,8 @@ a:hover {
   font-size: 14px;
   height: 40px;
   line-height: 40px;
-  margin-left: 234px;
+  margin-left: 240px;
   transition: 0.2s;
-  width: 80px;
 }
 @media screen and (max-width: 414px) {
   .u-btn__login {
@@ -1426,12 +1494,14 @@ a:hover {
 }
 
 .u-invalid--error {
-  color: red;
+  color: #f3ffb7;
   display: block;
-  font-size: 20px;
+  font-size: 16px;
+  line-height: 1.2em;
   margin-left: auto;
   margin-right: auto;
   position: relative;
+  text-align: center;
   top: 32px;
   width: 500px;
 }
@@ -1441,6 +1511,18 @@ a:hover {
     text-align: center;
     top: 25px;
     width: 100%;
+  }
+}
+.u-invalid--error.is-email-reset {
+  color: #d83d3d;
+  position: absolute;
+  top: -125px;
+  width: 100%;
+}
+@media screen and (max-width: 414px) {
+  .u-invalid--error.is-email-reset {
+    text-align: left;
+    top: -120px;
   }
 }
 .u-invalid--error.is-register {
@@ -1485,7 +1567,7 @@ a:hover {
 @media screen and (max-width: 414px) {
   .pagination {
     background-color: #f6f5f4;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     width: 100%;
   }
 }

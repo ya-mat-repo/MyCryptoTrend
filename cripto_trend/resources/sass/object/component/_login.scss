@@ -3,7 +3,7 @@
   height: 40px;
   line-height: 40px;
   position: relative;
-  font-size: $font-size_xxl;
+  font-size: $font-size_xl;
   text-align: center;
   margin-bottom: $space_xl;
   font-family: 'Noto Sans JP', sans-serif;
@@ -25,8 +25,8 @@
   color: $color-base;
 
   @include mq() {
-    height: 100vh;
-    width: 100%;
+    height: calc(100vh - 60px);
+    width: 100vw;
     top: 60px;
   }
 }
@@ -64,13 +64,31 @@
 }
 
 .c-login__input {
-  width: 380px;
+  width: 350px;
   height: 40px;
   font-size: $font-size_l;
+  padding-left: $space_m;
+  padding-right: $space_m;
 
   @include mq() {
     height: 30px;
-    width: 100%;
+    width: calc(100% - 20px);
+  }
+}
+
+.c-message__validate {
+  color: $color-error-bgblack;
+  display: block;
+  font-size: $font-size_m;
+  position: relative;
+  top: -30px;
+  width: 50%;
+  margin-left: 380px;
+
+  @include mq() {
+    font-size: $font-size_s;
+    margin-left: 55px;
+    width: calc(100vw - 55px);
   }
 }
 
@@ -117,7 +135,6 @@
 }
 
 .c-background__login {
-  // background-image: url(../../public/img/hero2.jpg);
   background-image: url(../img/hero2.jpg);
   background-attachment: fixed;
   background-position: center;
@@ -127,8 +144,9 @@
   background-color: rgba(255, 255, 255, 0.2);
   background-blend-mode: lighten;
   z-index: 1;
-
+  
   @include mq() {
+    background-image: url(../img/hero_m.jpg);
     height: initial;
     width: 100%;
   }

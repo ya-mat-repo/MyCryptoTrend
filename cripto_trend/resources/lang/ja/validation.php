@@ -112,7 +112,7 @@ return [
     'starts_with' => ':attributeは、次のいずれかで始まる必要があります。:values',
     'string'      => ':attributeには、文字を指定してください。',
     'timezone'    => ':attributeには、有効なタイムゾーンを指定してください。',
-    'unique'      => '指定の:attributeは既に使用されています。',
+    'unique'      => '指定の:attributeはご利用できません。',
     'uploaded'    => ':attributeのアップロードに失敗しました。',
     'url'         => ':attributeは、有効なURL形式で指定してください。',
     'uuid'        => ':attributeは、有効なUUIDでなければなりません。',
@@ -147,5 +147,6 @@ return [
 
     'attributes' => [
         'password' => 'パスワード',
+        'email' => 'メールアドレス',
     ],
 ];

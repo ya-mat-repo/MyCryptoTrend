@@ -10,18 +10,13 @@
                 </div>
             </div>
 
-            <!-- <div class="c-news__item">
-                <ul>
-                    <li v-for="(content, index) in contents_json" :key=index><a :href="content.link" target="_blank"><textarea class="c-news__item--title" cols="100" rows="1" readonly>{{content.title}}</textarea></a></li>
-                </ul>
-            </div> -->
             <div class="c-news__item">
                 <ul>
                     <li v-for="(content, index) in displayContents" :key=index>
-                        <!-- <span class="c-news__item--pubdate">{{content.pubDate}}</span> -->
                         <span class="c-news__item--pubdate">{{dateFormat(content.pubDate)}}</span>
                         <a :href="content.link" target="_blank">
-                            <textarea class="c-news__item--title" cols="100" rows="1" readonly>{{content.title}}</textarea>
+                            <textarea class="c-news__item--title" cols="100" rows="1" readonly v-model="content['title']"></textarea>
+                            <!-- <textarea class="c-news__item--title" cols="100" rows="1" readonly v-model="content['title']">{{content.title}}</textarea> -->
                         </a>
                     </li>
                 </ul>

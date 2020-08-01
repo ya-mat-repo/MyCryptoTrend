@@ -1,6 +1,7 @@
 {
   "Confirm Password": "パスワード(確認用)",
   "E-Mail Address": "メールアドレス",
+  "E-Mail Format": "@を含むメールアドレスの形式で入力してください",
   "Forgot Your Password": "パスワードを忘れた場合はこちら",
   "Home": "ホーム",
   "List": "アカウント一覧",
@@ -9,6 +10,7 @@
   "Name": "名前",
   "News": "ニュース",
   "Password": "パスワード",
+  "Password Format": "パスワードは8文字以上で設定してください",
   "Register": "新規登録",
   "Registration_TW": "Twitterアカウント登録",
   "Remember Me": "ログイン状態を保持",
