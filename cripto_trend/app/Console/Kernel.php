@@ -107,9 +107,6 @@ class Kernel extends ConsoleKernel
             $api_key = 'u8GXSucbr7JvGzWb2TonppQgL';
             $api_secret = 'rYVAprz5SDwEUoIDL1bLlOphVCs9gnptdWPadzBR7KbSrIbX31';
 
-            // 復号用のキーを設定
-            // Crypt::setKey('base64:PKE62zE7VahAkTKtMVH6f51G9FnFgwbh6whjEkgcmfg=');
-            
             // 自動フォロー機能を有効にしているユーザーのみ処理を実施
             $target_users = DB::table('users')->where('is_auto_follow', true)->get();
             

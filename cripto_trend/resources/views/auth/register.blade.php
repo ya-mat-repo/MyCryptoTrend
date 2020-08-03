@@ -41,7 +41,7 @@
                 <input id="email" type="email" class="c-login__input @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                 
                 @error('email')
-                <span class="u-invalid--error is-register" role="alert">
+                <span class="u-invalid--error is-register is-email" role="alert">
                   <strong>{{ $message }}</strong>
                 </span>
                 @enderror
@@ -53,7 +53,7 @@
                 <input id="password" type="password" class="c-login__input @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                 
                 @error('password')
-                <span class="u-invalid--error is-register" role="alert">
+                <span class="u-invalid--error is-register is-password" role="alert">
                   <strong>{{ $message }}</strong>
                 </span>
                 @enderror

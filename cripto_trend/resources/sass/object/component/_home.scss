@@ -29,11 +29,12 @@
 .c-checkbox__area {
   position: relative;
   width: 30%;
-  background-color: rgba(244,244,244, 0.7);
+  background-color: rgba(244, 244, 244, 0.7);
   float: left;
   min-height: 500px;
-
+  
   @include mq() {
+    background-color: rgba(255, 255, 255, 0.6);
     min-height: 100vh;
   }
 }

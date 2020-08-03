@@ -51314,9 +51314,9 @@ __webpack_require__.r(__webpack_exports__);
     $('.js-flash_message').fadeIn(2000).fadeOut(4000);
   }); // フッターを最下部に固定
 
-  var $ftr = $('.js-footer');
+  var $ftr = $('.js-footer'); // if (window.innerHeight > $ftr.offset().top + $ftr.outerHeight()) {
 
-  if (window.innerHeight > $ftr.offset().top + $ftr.outerHeight()) {
+  if (window.outerHeight > $ftr.offset().top + $ftr.outerHeight()) {
     $ftr.attr({
       'style': 'position:fixed; top:' + (window.innerHeight - $ftr.outerHeight()) + 'px;'
     });

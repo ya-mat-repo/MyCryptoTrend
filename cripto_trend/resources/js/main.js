@@ -10,7 +10,8 @@ global.$ = global.jQuery = require('jquery');
 
     // フッターを最下部に固定
     const $ftr = $('.js-footer');
-    if (window.innerHeight > $ftr.offset().top + $ftr.outerHeight()) {
+    // if (window.innerHeight > $ftr.offset().top + $ftr.outerHeight()) {
+    if (window.outerHeight > $ftr.offset().top + $ftr.outerHeight()) {
         $ftr.attr({'style': 'position:fixed; top:' + (window.innerHeight - $ftr.outerHeight()) + 'px;'});
     }
 

@@ -70,14 +70,23 @@
     &.is-register {
       position: absolute;
       text-align: center;
-      top: -40px;
+      top: -50px;
       
       @include mq() {
         left: 0;
-        top: -20px;
+        top: -25px;
         width: 100%;
       }
     }
+    
+    &.is-register.is-password {
+      top: -25px;
+
+      @include mq() {
+        top: -8px;
+      }
+    }
+
 }
 
 .u-font-size--s {

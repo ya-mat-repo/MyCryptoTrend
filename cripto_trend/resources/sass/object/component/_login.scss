@@ -25,9 +25,10 @@
   color: $color-base;
 
   @include mq() {
-    height: calc(100vh - 60px);
+    height: calc(100vh - 120px);
     width: 100vw;
     top: 60px;
+    margin-bottom: 60px;
   }
 }
 
@@ -104,10 +105,15 @@
 
   @include mq() {
     justify-content: initial;
+    margin-bottom: $space_s;
   }
 
   &__checkbox {
     transform: scale(1.2);
+
+    @include mq() {
+      margin-left: 1px;
+    }
   }
 
   &__label {
@@ -130,7 +136,9 @@
   left: 2px;
 
   @include mq() {
-    left: 5px;
+    width: initial;
+    margin-left: 55px;
+    margin-top: -10px;
   }
 }
 
@@ -153,7 +161,7 @@
 }
 
 .c-label__forgot {
-  color: #efda9a;
+  color: $color-error-bgblack;
   font-size: $font-size_m;
   margin-left: $space_s;
 
