@@ -777,7 +777,7 @@ a:hover {
 }
 @media screen and (max-width: 414px) {
   .c-login__container {
-    height: calc(100vh - 120px);
+    height: calc(100vh - 60px);
     width: 100vw;
     top: 60px;
     margin-bottom: 60px;
@@ -1297,7 +1297,7 @@ a:hover {
 }
 
 .p-icon__check {
-  color: #105210;
+  color: #1052109e;
   margin-right: 30px;
 }
 @media screen and (max-width: 414px) {
@@ -1338,7 +1338,7 @@ a:hover {
   z-index: 1;
 }
 .p-hero__title.is-center {
-  color: #fffef9;
+  color: #1052109e;
   font-size: 55px;
   font-family: "Shadows Into Light", cursive;
   line-height: 800px;

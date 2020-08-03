@@ -25,7 +25,7 @@
   color: $color-base;
 
   @include mq() {
-    height: calc(100vh - 120px);
+    height: calc(100vh - 60px);
     width: 100vw;
     top: 60px;
     margin-bottom: 60px;
