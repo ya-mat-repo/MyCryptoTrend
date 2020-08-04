@@ -2244,7 +2244,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['tweet_counts_json', 'ticker_response_json', 'count_updated_at'],
   data: function data() {

@@ -16,8 +16,8 @@
     @endcomponent
 
     <main>
-        @if (parse_url(url()->previous(), PHP_URL_PATH) === '/login' ||
-             parse_url(url()->previous(), PHP_URL_PATH) === '/register' ||
+        @if (Str::contains(parse_url(url()->previous(), PHP_URL_PATH), '/login') ||
+             Str::contains(parse_url(url()->previous(), PHP_URL_PATH), '/register') ||
              Str::contains(parse_url(url()->previous(), PHP_URL_PATH), '/password/reset'))
             <div class="c-flash-message js-flash_message">
                 <h2 class="c-flash-message__text">Crypto Trendへようこそ。</h2>
