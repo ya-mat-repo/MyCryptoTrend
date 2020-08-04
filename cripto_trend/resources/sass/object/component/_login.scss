@@ -107,6 +107,7 @@
   @include mq() {
     justify-content: initial;
     margin-bottom: $space_s;
+    margin-top: -10px;
   }
 
   &__checkbox {

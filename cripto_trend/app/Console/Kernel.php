@@ -54,15 +54,21 @@ class Kernel extends ConsoleKernel
             while (true) {
                 Log::debug('>>>>>>>>>> 「' . $keyword . '」を含むユーザーを検索します('.$page.'ページ目)。 >>>>>>>>>>');
                 $candidates = $connect->get('users/search', $params);
+
+                if (is_object($candidates) && property_exists($candidates, 'errors')) {
+                    $errors = $candidates->errors;
+                    if ($errors[0]->code === 44) {
+                        Log::debug('検索結果利用数が上限に達したため処理を終了します。');
+                        break;
+                    }
+                }
+
                 if (is_array($candidates)) {
                     Log::debug('>>>>> count($candidates = ' . count($candidates));
                 }
-                if (empty($candidates)) {
-                    break;
-                }
+
                 foreach ($candidates as $key => $candidate) {
                     Log::debug('>>>>> Current user is [' . $candidate->screen_name . '].');
-                    // Log::debug('$candidate_'.$key.' = '. print_r($candidate, true));
                     // 最新ツイートがある程度過去の場合、当該ユーザーのstatusプロパティは存在しないため固定の文言(No Data)を設定する
                     if (property_exists($candidate, 'status')) {
                         $latest_tweet = $candidate->status->text;
