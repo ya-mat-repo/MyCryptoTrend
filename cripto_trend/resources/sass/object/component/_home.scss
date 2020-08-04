@@ -98,6 +98,10 @@
 
 .c-checkbox__label {
   position: relative;
+
+  @include mq() {
+    font-size: $font-size_s;
+  }
 }
 
 
@@ -201,6 +205,10 @@
 
   &__data {
     border: 1px solid;
+
+    @include mq() {
+      font-size: $font-size_s;
+    }
     
     &.u-text-center {
       text-align: center;
@@ -226,6 +234,7 @@
     margin-bottom: $space_s;
 
     @include mq() {
+      font-size: $font-size_s;
       margin-left: $space_s;
     }
     

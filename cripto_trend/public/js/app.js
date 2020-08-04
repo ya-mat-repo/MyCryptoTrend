@@ -2244,6 +2244,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['tweet_counts_json', 'ticker_response_json', 'count_updated_at'],
   data: function data() {
@@ -38522,9 +38523,7 @@ var render = function() {
                     }
                   }),
                   _c("span", { staticClass: "c-checkbox__label" }, [
-                    _vm._v(_vm._s(value)),
-                    _c("br", { staticClass: "u-sp-break" }),
-                    _vm._v("(" + _vm._s(key) + ")")
+                    _vm._v(_vm._s(value) + "(" + _vm._s(key) + ")")
                   ])
                 ]
               )

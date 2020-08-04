@@ -10,6 +10,7 @@
 
   @include mq() {
     font-size: 20px;
+    margin-bottom: $space_m;
   }
 }
 
@@ -38,7 +39,7 @@
   top: 75px;
 
   @include mq() {
-    top: 30px;
+    top: 45px;
   }
 }
 

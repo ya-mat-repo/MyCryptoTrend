@@ -286,7 +286,7 @@ a:hover {
   left: 0;
   width: 100%;
   height: 60px;
-  background: rgba(10, 25, 232, 0.6);
+  background: rgba(10, 25, 232, 0.8);
   display: none;
   z-index: 2;
 }
@@ -296,6 +296,11 @@ a:hover {
   font-size: 18px;
   color: #efefef;
   line-height: 60px;
+}
+@media screen and (max-width: 414px) {
+  .c-flash-message__text {
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 414px) {
@@ -514,6 +519,11 @@ a:hover {
 .c-checkbox__label {
   position: relative;
 }
+@media screen and (max-width: 414px) {
+  .c-checkbox__label {
+    font-size: 12px;
+  }
+}
 
 .c-term__container {
   margin-top: 15px;
@@ -609,6 +619,11 @@ a:hover {
 .c-currency-table__data {
   border: 1px solid;
 }
+@media screen and (max-width: 414px) {
+  .c-currency-table__data {
+    font-size: 12px;
+  }
+}
 .c-currency-table__data.u-text-center {
   text-align: center;
 }
@@ -632,6 +647,7 @@ a:hover {
 }
 @media screen and (max-width: 414px) {
   .c-button__select {
+    font-size: 12px;
     margin-left: 5px;
   }
 }
@@ -761,6 +777,7 @@ a:hover {
 @media screen and (max-width: 414px) {
   .c-login__title {
     font-size: 20px;
+    margin-bottom: 10px;
   }
 }
 
@@ -791,7 +808,7 @@ a:hover {
 }
 @media screen and (max-width: 414px) {
   .c-item__container {
-    top: 30px;
+    top: 45px;
   }
 }
 
@@ -977,6 +994,7 @@ a:hover {
 @media screen and (max-width: 414px) {
   .c-news__item {
     margin-left: 5px;
+    margin-right: 5px;
   }
 }
 .c-news__item--title {
@@ -1059,7 +1077,13 @@ a:hover {
 @media screen and (max-width: 414px) {
   .c-remainder__submit {
     margin-left: initial;
-    left: 39px;
+    left: 38px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .c-remainder__label {
+    display: block;
+    margin-bottom: 5px;
   }
 }
 
@@ -1121,7 +1145,7 @@ a:hover {
 }
 @media screen and (max-width: 414px) {
   .c-reset {
-    margin-left: 25px;
+    margin-left: initial;
   }
 }
 .c-reset__label {
@@ -1136,6 +1160,14 @@ a:hover {
   padding-left: 10px;
   padding-right: 10px;
 }
+@media screen and (max-width: 414px) {
+  .c-reset__input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75vw;
+  }
+}
 .c-reset__title {
   color: #616265;
   font-size: 16px;
@@ -1148,6 +1180,25 @@ a:hover {
   border-radius: 10px;
   text-align: center;
 }
+@media screen and (max-width: 414px) {
+  .c-reset__label {
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 35px;
+  }
+}
+.c-reset__form {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #eef6f7;
+  padding-right: 50px;
+}
+@media screen and (max-width: 414px) {
+  .c-reset__form {
+    padding-right: initial;
+    width: 100vw;
+  }
+}
 .c-reset__input-block {
   margin-bottom: 15px;
 }
@@ -1157,7 +1208,7 @@ a:hover {
 }
 @media screen and (max-width: 414px) {
   .c-reset__submit {
-    margin-left: 25px;
+    margin-left: 35px;
     position: relative;
   }
 }
@@ -1190,18 +1241,6 @@ a:hover {
   .c-reset__container {
     padding-top: 100px;
     width: 100%;
-  }
-}
-
-.c-reset__form {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background-color: #eef6f7;
-  padding-right: 50px;
-}
-@media screen and (max-width: 414px) {
-  .c-reset__form {
-    padding-right: initial;
   }
 }
 
@@ -1549,7 +1588,7 @@ a:hover {
 @media screen and (max-width: 414px) {
   .u-invalid--error.is-register {
     left: 0;
-    top: -25px;
+    top: -40px;
     width: 100%;
   }
 }
@@ -1558,7 +1597,7 @@ a:hover {
 }
 @media screen and (max-width: 414px) {
   .u-invalid--error.is-register.is-password {
-    top: -8px;
+    top: -20px;
   }
 }
 

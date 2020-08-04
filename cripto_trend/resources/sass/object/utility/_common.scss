@@ -74,7 +74,7 @@
       
       @include mq() {
         left: 0;
-        top: -25px;
+        top: -40px;
         width: 100%;
       }
     }
@@ -83,7 +83,7 @@
       top: -25px;
 
       @include mq() {
-        top: -8px;
+        top: -20px;
       }
     }
 

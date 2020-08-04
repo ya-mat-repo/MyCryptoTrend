@@ -16,6 +16,13 @@
     @endcomponent
 
     <main>
+        @if (parse_url(url()->previous(), PHP_URL_PATH) === '/login' ||
+             parse_url(url()->previous(), PHP_URL_PATH) === '/register' ||
+             Str::contains(parse_url(url()->previous(), PHP_URL_PATH), '/password/reset'))
+            <div class="c-flash-message js-flash_message">
+                <h2 class="c-flash-message__text">Crypto Trendへようこそ。</h2>
+            </div>
+        @endif
         <div id="app">
             <show-trend-component :tweet_counts_json="{{$tweet_counts_json}}" :ticker_response_json="{{$ticker_response_json}}" :count_updated_at="{{$count_updated_at}}"></show-trend-component>
         </div>

@@ -38,6 +38,7 @@
   
   @include mq() {
     margin-left: $space_s;
+    margin-right: $space_s;
   }
 
   &--title {
