@@ -103,6 +103,10 @@
   font-size: 10px;
   width:52px;
 
+  @include mq() {
+    margin-left: 2px;
+  }
+
   &:hover {
       background: #31749b;
       cursor: pointer;
@@ -121,6 +125,10 @@
   transition: .2s;
   font-size: 10px;
   width:52px;
+
+  @include mq() {
+    margin-left: 2px;
+  }
 
   &:hover {
       background: #ac6c4f;

@@ -70,16 +70,23 @@
 
     @include mq() {
       background-color: #f6f5f4;
+      display: flex;
+      flex-wrap: wrap;
       font-size: 12px;
-      margin-bottom: 80px;
+      margin-bottom: 100px;
       margin-left: $space_s;
       margin-right: $space_s;
+      overflow: initial;
       width: calc(100vw - 10px);
     }
 }
 .page-item {
     float: left;
     margin-left: $space_m;
+
+    @include mq() {
+      background-color: #f6f5f4;
+    }
 
     &:first-child {
         margin-left: 0;
@@ -90,7 +97,7 @@
         font-size: $font-size_xl;
 
         @include mq() {
-          font-size: $font-size_default;
+          font-size: $font-size_m;
         }
     }
 }

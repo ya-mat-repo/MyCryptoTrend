@@ -217,6 +217,11 @@ a:hover {
   font-size: 10px;
   width: 52px;
 }
+@media screen and (max-width: 414px) {
+  .c-button__follow {
+    margin-left: 2px;
+  }
+}
 .c-button__follow:hover {
   background: #31749b;
   cursor: pointer;
@@ -234,6 +239,11 @@ a:hover {
   transition: 0.2s;
   font-size: 10px;
   width: 52px;
+}
+@media screen and (max-width: 414px) {
+  .c-button__unfollow {
+    margin-left: 2px;
+  }
 }
 .c-button__unfollow:hover {
   background: #ac6c4f;
@@ -1651,10 +1661,13 @@ a:hover {
 @media screen and (max-width: 414px) {
   .pagination {
     background-color: #f6f5f4;
+    display: flex;
+    flex-wrap: wrap;
     font-size: 12px;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
     margin-left: 5px;
     margin-right: 5px;
+    overflow: initial;
     width: calc(100vw - 10px);
   }
 }
@@ -1662,6 +1675,11 @@ a:hover {
 .page-item {
   float: left;
   margin-left: 10px;
+}
+@media screen and (max-width: 414px) {
+  .page-item {
+    background-color: #f6f5f4;
+  }
 }
 .page-item:first-child {
   margin-left: 0;
@@ -1672,6 +1690,6 @@ a:hover {
 }
 @media screen and (max-width: 414px) {
   .page-item.active {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
