@@ -188,6 +188,7 @@ class Kernel extends ConsoleKernel
         // ==========================================
         // 通貨別ツイート数取得処理
         // ==========================================  
+        define('TWEET_COUNT_PER_REQUEST', 100);
         // 過去一週間分
         $schedule->call(function() {
             Log::debug('>>>>>>>>>> 過去１週間分の通貨別のツイート数を取得します。 >>>>>>>>>>');
@@ -199,8 +200,6 @@ class Kernel extends ConsoleKernel
             $access_token = '831669493621350401-dWf8Z2kmMjHe4q6MnP3136pfImtaPI3';
             $access_token_secret = '7J9HYDfw9wVWuOsrHyJmouRAUoB5yV0IMLYNlnIT2KmWe';
             $connect = new TwitterOAuth($api_key, $api_secret, $access_token, $access_token_secret);
-            // define('REQUEST_MAX_COUNT', 180);
-            define('TWEET_COUNT_PER_REQUEST', 100);
             $currency_names = [
                 'BTC' => 'ビットコイン',
                 'ETH' => 'イーサリアム',
@@ -286,8 +285,7 @@ class Kernel extends ConsoleKernel
                     TweetCount::where('currency_code', $currency_code)->update(['count' => $tweet_count[$key]]);
                 }
             }
-        // })->twiceDaily(5, 17);
-        })->dailyAt('0:00');
+        })->dailyAt('0:05');
 
         // 過去一日分
         $schedule->call(function() {
@@ -300,7 +298,6 @@ class Kernel extends ConsoleKernel
             $access_token = '831669493621350401-dWf8Z2kmMjHe4q6MnP3136pfImtaPI3';
             $access_token_secret = '7J9HYDfw9wVWuOsrHyJmouRAUoB5yV0IMLYNlnIT2KmWe';
             $connect = new TwitterOAuth($api_key, $api_secret, $access_token, $access_token_secret);
-            define('TWEET_COUNT_PER_REQUEST', 100);
             $currency_names = [
                 'BTC' => 'ビットコイン',
                 'ETH' => 'イーサリアム',
@@ -398,7 +395,6 @@ class Kernel extends ConsoleKernel
             $access_token = '831669493621350401-dWf8Z2kmMjHe4q6MnP3136pfImtaPI3';
             $access_token_secret = '7J9HYDfw9wVWuOsrHyJmouRAUoB5yV0IMLYNlnIT2KmWe';
             $connect = new TwitterOAuth($api_key, $api_secret, $access_token, $access_token_secret);
-            define('TWEET_COUNT_PER_REQUEST', 100);
             $currency_names = [
                 'BTC' => 'ビットコイン',
                 'ETH' => 'イーサリアム',

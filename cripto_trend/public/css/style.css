@@ -253,6 +253,7 @@ a:hover {
 }
 @media screen and (max-width: 414px) {
   .c-auto-follow__label {
+    font-size: 12px;
     margin-left: 5px;
   }
 }
@@ -260,6 +261,11 @@ a:hover {
   height: 32px;
   border-style: none;
   transition: 0.2s;
+}
+@media screen and (max-width: 414px) {
+  .c-auto-follow__submit {
+    font-size: 12px;
+  }
 }
 .c-auto-follow__submit:hover {
   cursor: pointer;
@@ -581,6 +587,11 @@ a:hover {
 .c-time__label {
   font-size: 14px;
 }
+@media screen and (max-width: 414px) {
+  .c-time__label {
+    font-size: 12px;
+  }
+}
 
 .c-currency-table {
   width: 98%;
@@ -596,6 +607,7 @@ a:hover {
 }
 .c-currency-table__header {
   background-color: #f6f5f4;
+  font-size: 12px;
   height: 28px;
   line-height: 28px;
   text-align: center;
@@ -985,6 +997,7 @@ a:hover {
 }
 @media screen and (max-width: 414px) {
   .c-news__label {
+    font-size: 16px;
     width: 100%;
   }
 }
@@ -1044,8 +1057,10 @@ a:hover {
 }
 @media screen and (max-width: 414px) {
   .c-news-page__button {
-    height: 28px;
-    margin-bottom: 5px;
+    height: initial;
+    margin-bottom: 2px;
+    padding-bottom: 2px;
+    padding-top: 2px;
   }
 }
 
@@ -1605,6 +1620,11 @@ a:hover {
 .u-font-size--s {
   font-size: 12px;
 }
+@media screen and (max-width: 414px) {
+  .u-font-size--s {
+    font-size: 10px;
+  }
+}
 
 .u-sp-break {
   display: none;
@@ -1631,8 +1651,11 @@ a:hover {
 @media screen and (max-width: 414px) {
   .pagination {
     background-color: #f6f5f4;
+    font-size: 12px;
     margin-bottom: 80px;
-    width: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: calc(100vw - 10px);
   }
 }
 
@@ -1646,4 +1669,9 @@ a:hover {
 .page-item.active {
   font-weight: bold;
   font-size: 24px;
+}
+@media screen and (max-width: 414px) {
+  .page-item.active {
+    font-size: 16px;
+  }
 }

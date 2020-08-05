@@ -91,6 +91,10 @@
 
 .u-font-size--s {
   font-size: $font-size_s;
+
+  @include mq() {
+    font-size: 10px;
+  }
 }
 
 .u-sp-break {

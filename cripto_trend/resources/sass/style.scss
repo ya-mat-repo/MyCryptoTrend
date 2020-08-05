@@ -70,8 +70,11 @@
 
     @include mq() {
       background-color: #f6f5f4;
+      font-size: 12px;
       margin-bottom: 80px;
-      width: 100%;
+      margin-left: $space_s;
+      margin-right: $space_s;
+      width: calc(100vw - 10px);
     }
 }
 .page-item {
@@ -85,5 +88,9 @@
     &.active {
         font-weight: bold;
         font-size: $font-size_xl;
+
+        @include mq() {
+          font-size: $font-size_default;
+        }
     }
 }

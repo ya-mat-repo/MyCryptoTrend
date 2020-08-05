@@ -140,6 +140,7 @@
     font-size: $font-size_m;
 
     @include mq() {
+      font-size: $font-size_s;
       margin-left: $space_s;
     }
   }
@@ -148,6 +149,10 @@
     height: 32px;
     border-style: none;
     transition: .2s;
+
+    @include mq() {
+      font-size: $font-size_s;
+    }
 
     &:hover {
       cursor: pointer;

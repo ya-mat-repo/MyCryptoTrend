@@ -30,6 +30,7 @@
   width: $site-width;
 
   @include mq() {
+    font-size: $font-size_default;
     width: 100%;
   }
 }
@@ -85,8 +86,10 @@
       height: 32px;
 
       @include mq() {
-        height: 28px;
-        margin-bottom: $space_s;
+        height: initial;
+        margin-bottom: 2px;
+        padding-bottom: 2px;
+        padding-top: 2px;
       }
   }
 }
