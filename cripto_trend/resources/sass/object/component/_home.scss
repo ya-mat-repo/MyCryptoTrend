@@ -182,12 +182,15 @@
   
   &__header {
     background-color: #f6f5f4;
-    font-size: $font-size_s;
+    font-size: $font-size_default;
     height: 28px;
     line-height: 28px;
     text-align: center;
-
+    
+    @include mq() {
+      font-size: $font-size_s;
     }
+  }
   
   &__title {
     border: 1px solid;

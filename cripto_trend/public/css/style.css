@@ -111,6 +111,7 @@ a:hover {
 }
 @media screen and (max-width: 414px) {
   .l-footer {
+    font-size: 12px;
     height: 60px;
     line-height: 60px;
   }
@@ -617,10 +618,15 @@ a:hover {
 }
 .c-currency-table__header {
   background-color: #f6f5f4;
-  font-size: 12px;
+  font-size: 16px;
   height: 28px;
   line-height: 28px;
   text-align: center;
+}
+@media screen and (max-width: 414px) {
+  .c-currency-table__header {
+    font-size: 12px;
+  }
 }
 .c-currency-table__title {
   border: 1px solid;
@@ -1656,7 +1662,7 @@ a:hover {
   margin-top: 15px;
   overflow: hidden;
   position: relative;
-  width: 420px;
+  width: 500px;
 }
 @media screen and (max-width: 414px) {
   .pagination {

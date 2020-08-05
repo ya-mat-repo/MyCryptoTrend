@@ -8,6 +8,7 @@
   z-index: 0;
 
   @include mq() {
+    font-size: $font-size_s;
     height: 60px;
     line-height: 60px;
   }
